@@ -1,10 +1,20 @@
 import { motion } from "motion/react";
-import { FiDownload, FiMail } from "react-icons/fi";
+import {
+  FiDownload,
+  FiMail,
+  FiMapPin,
+  FiGlobe,
+} from "react-icons/fi";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaInstagram,
+} from "react-icons/fa";
 
 const Hero = () => {
   return (
     <section className="relative">
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pt-5 pb-14">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pt-6 pb-13">
 
         {/* Main Content */}
         <motion.div
@@ -13,12 +23,10 @@ const Hero = () => {
           variants={{
             hidden: {},
             visible: {
-              transition: {
-                staggerChildren: 0.15,
-              },
+              transition: { staggerChildren: 0.15 },
             },
           }}
-          className="flex flex-col gap-6"
+          className="flex flex-col gap-5"
         >
           {/* Greeting */}
           <motion.p
@@ -56,7 +64,74 @@ const Hero = () => {
             Full Stack Developer (MERN)
           </motion.h2>
 
-          {/* Summary */}
+          {/* Location + Socials */}
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="flex flex-wrap items-center gap-5 text-sm text-gray-600 dark:text-gray-400"
+          >
+            {/* Location */}
+            <div className="flex items-center gap-1">
+              <FiMapPin />
+              Bengaluru, India
+            </div>
+
+            {/* Social Icons */}
+            <div className="flex items-center gap-4">
+              <a
+                href="https://mohanbadiger.site"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-black dark:hover:text-white transition"
+                aria-label="Portfolio"
+              >
+                <FiGlobe size={18} />
+              </a>
+
+              <a
+                href="https://github.com/Mohan-Badiger"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-black dark:hover:text-white transition"
+                aria-label="GitHub"
+              >
+                <FaGithub size={18} />
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/mohan-badiger"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-black dark:hover:text-white transition"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedin size={18} />
+              </a>
+
+              <a
+                href="mailto:mohanbadiger250@gmail.com"
+                className="hover:text-black dark:hover:text-white transition"
+                aria-label="Email"
+              >
+                <FiMail size={18} />
+              </a>
+
+              <a
+                href="https://www.instagram.com/mohan_badiger250"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-black dark:hover:text-white transition"
+                aria-label="Instagram"
+              >
+                <FaInstagram size={18} />
+              </a>
+            </div>
+          </motion.div>
+
+          {/* Description */}
           <motion.p
             variants={{
               hidden: { opacity: 0, y: 24 },
@@ -65,9 +140,9 @@ const Hero = () => {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="max-w-2xl text-base leading-relaxed text-gray-600 dark:text-gray-400"
           >
-            I build scalable, clean, and performance-focused web applications.
-            Passionate about writing maintainable code, solving real-world
-            problems, and delivering reliable user experiences.
+            I build scalable, clean, and performance-focused web applications
+            using the MERN stack. I enjoy solving real-world problems, writing
+            maintainable code, and continuously improving my engineering skills.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -98,7 +173,7 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      {/* Subtle Background Accent */}
+      {/* Subtle background accent */}
       <motion.div
         aria-hidden
         initial={{ opacity: 0 }}

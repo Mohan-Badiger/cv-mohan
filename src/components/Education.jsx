@@ -55,7 +55,7 @@ const Education = () => {
               className="relative rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-black p-6"
             >
               {/* Timeline Dot */}
-              <span className="absolute -left-2 top-6 h-3 w-3 rounded-full bg-black dark:bg-white" />
+              {/* <span className="absolute left-2 top-8.5 h-2 w-2 rounded-full bg-black dark:bg-white" /> */}
 
               <div className="flex flex-col gap-2">
                 <h3 className="text-base sm:text-lg font-medium text-black dark:text-white">

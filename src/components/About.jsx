@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 const About = () => {
   return (
     <section id="about" className="relative">
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-20">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-15">
 
         {/* Section Header */}
         <motion.div
