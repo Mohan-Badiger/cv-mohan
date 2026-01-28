@@ -82,7 +82,7 @@ const Activity = () => {
 
   return (
     <section id="activity">
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-20">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-8">
 
         {/* Header */}
         <motion.div

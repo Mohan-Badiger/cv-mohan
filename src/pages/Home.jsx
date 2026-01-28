@@ -12,7 +12,6 @@ import Activity from '../components/Activity'
 const Home = () => {
   return (
     <div>
-        <Navbar/>
         <Hero/>
         <Activity/>
         <About/>

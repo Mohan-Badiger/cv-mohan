@@ -35,7 +35,7 @@ const Skills = () => {
           <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-black dark:text-white">
             Skills
           </h2>
-          <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+          <p className="mt-2 text-sm text-gray-500 dark:text-gray-500">
             Technologies and tools I work with
           </p>
         </motion.div>

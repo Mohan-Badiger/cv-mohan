@@ -63,7 +63,7 @@ const Navbar = () => {
       transition={{ duration: 0.4, ease: "easeOut" }}
       className="fixed inset-x-0 top-0 z-50 border-b border-gray-200/70 dark:border-gray-800/70 bg-white/80 dark:bg-black/80 backdrop-blur"
     >
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div className="mx-auto max-w-5xl px-6 sm:px-10 lg:px-15 h-16 flex items-center justify-between">
 
         {/* Brand */}
         <button

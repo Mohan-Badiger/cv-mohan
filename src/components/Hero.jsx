@@ -4,7 +4,7 @@ import { FiDownload, FiMail } from "react-icons/fi";
 const Hero = () => {
   return (
     <section className="relative">
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pt-17 pb-14">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pt-5 pb-14">
 
         {/* Main Content */}
         <motion.div

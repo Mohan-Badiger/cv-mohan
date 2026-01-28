@@ -26,7 +26,7 @@ const experiences = [
 const Experience = () => {
   return (
     <section id="experience" className="relative">
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-20">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-8">
 
         {/* Section Header */}
         <motion.div
@@ -39,7 +39,7 @@ const Experience = () => {
           <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-black dark:text-white">
             Experience
           </h2>
-          <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+          <p className="mt-2 text-sm text-gray-500 dark:text-gray-500">
             Professional and project experience
           </p>
         </motion.div>
@@ -60,7 +60,7 @@ const Experience = () => {
                 className="relative pl-12"
               >
                 {/* Dot */}
-                <span className="absolute left-10px top-2 h-3 w-3 rounded-full bg-black dark:bg-white" />
+                <span className="absolute left-8 top-2.5 h-2 w-2 rounded-full bg-black dark:bg-slate-200" />
 
                 {/* Content */}
                 <div className="flex flex-col gap-2">
