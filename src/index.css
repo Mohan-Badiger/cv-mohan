@@ -19,3 +19,40 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ===== Modern Thin Scrollbar ===== */
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #a1a1aa transparent;
+}
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #a1a1aa;
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #71717a;
+}
+
+/* Dark mode */
+.dark ::-webkit-scrollbar-thumb {
+  background-color: #52525b;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background-color: #a1a1aa;
+}

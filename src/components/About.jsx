@@ -3,21 +3,21 @@ import { motion } from "motion/react";
 const About = () => {
   return (
     <section id="about" className="relative">
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-15">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-20">
 
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="mb-10"
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="mb-12"
         >
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-black dark:text-white">
-            About Me
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-gray-900 dark:text-white">
+            About
           </h2>
-          <p className="mt-2 text-sm text-gray-500 dark:text-gray-500">
-            A brief professional overview
+          <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+            A quick professional overview
           </p>
         </motion.div>
 
@@ -28,68 +28,67 @@ const About = () => {
           viewport={{ once: true }}
           variants={{
             hidden: {},
-            visible: {
-              transition: { staggerChildren: 0.15 },
-            },
+            visible: { transition: { staggerChildren: 0.12 } },
           }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start"
+          className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start"
         >
-          {/* Left Text */}
+          {/* Left: Summary */}
           <motion.div
             variants={{
-              hidden: { opacity: 0, y: 24 },
+              hidden: { opacity: 0, y: 18 },
               visible: { opacity: 1, y: 0 },
             }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="text-gray-700 dark:text-gray-300 leading-relaxed"
+            transition={{ duration: 0.5 }}
+            className="text-gray-600 dark:text-gray-400 leading-relaxed"
           >
             <p className="mb-4">
-              I am a passionate Full Stack Developer with hands-on experience in
-              building scalable and maintainable web applications using the
-              MERN stack. I enjoy translating complex requirements into clean,
-              efficient solutions.
+              I am a Full Stack Developer with hands-on experience building
+              scalable and maintainable web applications using the MERN stack.
+              I enjoy turning complex requirements into clean, practical
+              solutions.
             </p>
 
             <p>
-              I focus strongly on code quality, performance, and usability. My
-              goal is to work on impactful projects where technology solves
-              real-world problems and continuously improve my technical skills.
+              I focus on writing quality code with attention to performance,
+              usability, and long-term maintainability. I’m motivated to work
+              on meaningful projects where technology solves real-world
+              problems and helps users effectively.
             </p>
           </motion.div>
 
-          {/* Right Info */}
+          {/* Right: Quick Facts */}
           <motion.div
             variants={{
-              hidden: { opacity: 0, y: 24 },
+              hidden: { opacity: 0, y: 18 },
               visible: { opacity: 1, y: 0 },
             }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="space-y-4"
+            transition={{ duration: 0.5 }}
+            className="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-black p-6 space-y-4"
           >
-            <div className="flex justify-between border-b border-gray-200 dark:border-gray-800 pb-2">
+            <div className="flex justify-between">
               <span className="text-sm text-gray-500">Location</span>
-              <span className="text-sm font-medium text-black dark:text-white">
+              <span className="text-sm font-medium text-gray-900 dark:text-white">
                 Bengaluru, India
               </span>
             </div>
 
-            <div className="flex justify-between border-b border-gray-200 dark:border-gray-800 pb-2">
-              <span className="text-sm text-gray-500">Experience</span>
-              <span className="text-sm font-medium text-black dark:text-white">
-                Fresher
+            <div className="flex justify-between">
+              <span className="text-sm text-gray-500">Experience Level</span>
+              <span className="text-sm font-medium text-gray-900 dark:text-white">
+                Entry-level Full Stack Developer
               </span>
             </div>
 
-            <div className="flex justify-between border-b border-gray-200 dark:border-gray-800 pb-2">
+            <div className="flex justify-between">
               <span className="text-sm text-gray-500">Primary Stack</span>
-              <span className="text-sm font-medium text-black dark:text-white">
+              <span className="text-sm font-medium text-gray-900 dark:text-white">
                 MERN Stack
               </span>
             </div>
 
             <div className="flex justify-between">
               <span className="text-sm text-gray-500">Availability</span>
-              <span className="text-sm font-medium text-black dark:text-white">
+              <span className="text-sm font-medium text-gray-900 dark:text-white">
                 Open to Opportunities
               </span>
             </div>
