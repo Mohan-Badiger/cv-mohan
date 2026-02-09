@@ -9,8 +9,7 @@ This website presents my professional journey as a Full Stack Developer (MERN). 
 
 ## Live Preview
 
-Portfolio: https://your-portfolio-link.com  
-GitHub Profile: https://github.com/your-username  
+Portfolio: https://mohanbadiger.site 
 
 ## Tech Stack
 
@@ -106,9 +105,9 @@ cv-website/
 
 ## Contact
 
-Email: your-email@example.com  
-Portfolio: https://your-portfolio-link.com  
-GitHub: https://github.com/your-username  
+Email: mohanbadiger250@gmail.com
+Portfolio: https://mohanbadiger.site
+GitHub: https://github.com/Mohan-Badiger 
 
 ## License
 
