@@ -76,19 +76,6 @@ MongoDB, Mongoose, PostgreSQL
 **Tools & Practices:**  
 Git & GitHub, Postman, VS Code, Clean Code  
 
-## Project Structure
-
-cv-website/
-├── src/
-│   ├── components/
-│   ├── pages/
-│   ├── assets/
-│   ├── App.jsx
-│   └── main.jsx
-├── public/
-├── package.json
-└── README.md
-
 ## Setup Instructions
 
 1. Clone the repository  
