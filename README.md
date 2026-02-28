@@ -1,4 +1,3 @@
-
 # Personal CV / Portfolio Website (React)
 
 A modern, responsive CV / portfolio website built with React to showcase my professional profile, skills, experience, and projects. Designed with a clean UI, smooth UX, and performance-focused architecture.
@@ -77,19 +76,6 @@ MongoDB, Mongoose, PostgreSQL
 **Tools & Practices:**  
 Git & GitHub, Postman, VS Code, Clean Code  
 
-## Project Structure
-
-cv-website/
-├── src/
-│   ├── components/
-│   ├── pages/
-│   ├── assets/
-│   ├── App.jsx
-│   └── main.jsx
-├── public/
-├── package.json
-└── README.md
-
 ## Setup Instructions
 
 1. Clone the repository  
@@ -107,7 +93,9 @@ cv-website/
 ## Contact
 
 Email: mohanbadiger250@gmail.com
+
 Portfolio: https://mohanbadiger.site
+
 GitHub: https://github.com/Mohan-Badiger 
 
 ## License
