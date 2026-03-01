@@ -24,8 +24,8 @@ const education = [
 
 const Education = () => {
   return (
-    <section id="education" className="relative">
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-20">
+    <section id="education" className="relative scroll-mt-24">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
 
         {/* Section Header */}
         <motion.div
@@ -33,48 +33,45 @@ const Education = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="mb-12"
+          className="mb-10 sm:mb-12"
         >
           <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-black dark:text-white">
-            Education
+            Education & Academic Background
           </h2>
-          <p className="mt-2 text-sm text-gray-500 dark:text-gray-500">
+          <p className="mt-2 text-sm sm:text-base text-gray-500 dark:text-gray-400">
             Academic background and qualifications
           </p>
         </motion.div>
 
         {/* Education Cards */}
-        <div className="space-y-8">
+        <div className="space-y-6 sm:space-y-8">
           {education.map((edu, index) => (
-            <motion.div
+            <motion.article
               key={index}
               initial={{ opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              className="relative rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-black p-6"
+              className="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-black p-5 sm:p-6"
             >
-              {/* Timeline Dot */}
-              {/* <span className="absolute left-2 top-8.5 h-2 w-2 rounded-full bg-black dark:bg-white" /> */}
-
               <div className="flex flex-col gap-2">
-                <h3 className="text-base sm:text-lg font-medium text-black dark:text-white">
+                <h3 className="text-base sm:text-lg font-medium text-black dark:text-white leading-snug">
                   {edu.degree}
                 </h3>
 
-                <div className="flex flex-wrap items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
+                <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-1 sm:gap-2 text-xs sm:text-sm text-gray-500 dark:text-gray-400">
                   <span>{edu.institution}</span>
-                  <span>•</span>
+                  <span className="hidden sm:inline">•</span>
                   <span>{edu.year}</span>
                 </div>
 
-                <ul className="mt-3 list-disc pl-5 text-sm text-gray-700 dark:text-gray-300 space-y-1">
+                <ul className="mt-3 list-disc pl-5 text-xs sm:text-sm text-gray-700 dark:text-gray-300 space-y-1 leading-relaxed">
                   {edu.highlights.map((point, i) => (
                     <li key={i}>{point}</li>
                   ))}
                 </ul>
               </div>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
       </div>

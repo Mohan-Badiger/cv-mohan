@@ -23,10 +23,15 @@ const Navbar = () => {
 
   /* Smooth scroll with offset */
   const scrollToSection = (id) => {
+    if (id === "#") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
     const section = document.querySelector(id);
     if (!section) return;
 
-    const offset = -80; // navbar height
+    const offset = -80;
     const y =
       section.getBoundingClientRect().top +
       window.pageYOffset +
@@ -38,7 +43,7 @@ const Navbar = () => {
   /* Active section detection */
   useEffect(() => {
     const onScroll = () => {
-      const scrollPos = window.scrollY + 100;
+      const scrollPos = window.scrollY + 120;
 
       navItems.forEach((item) => {
         const section = document.querySelector(item.href);
@@ -58,23 +63,26 @@ const Navbar = () => {
 
   return (
     <motion.nav
+      role="navigation"
+      aria-label="Main Navigation"
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
       className="fixed inset-x-0 top-0 z-50 border-b border-gray-200/70 dark:border-gray-800/70 bg-white/80 dark:bg-black/80 backdrop-blur"
     >
-      <div className="mx-auto max-w-5xl px-6 sm:px-10 lg:px-15 h-16 flex items-center justify-between">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
 
         {/* Brand */}
         <button
           onClick={() => scrollToSection("#")}
           className="text-sm sm:text-base font-semibold tracking-wide text-black dark:text-white"
+          aria-label="Go to top - Mohan S Badiger"
         >
-          Mohan&nbsp;Badiger
+          Mohan&nbsp;S&nbsp;Badiger
         </button>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex items-center gap-8 relative">
+        <ul className="hidden md:flex items-center gap-6 lg:gap-8 relative">
           {navItems.map((item) => {
             const isActive = active === item.href;
 
@@ -103,12 +111,13 @@ const Navbar = () => {
         </ul>
 
         {/* Actions */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
           {/* Theme toggle */}
           <motion.button
             whileTap={{ rotate: 180 }}
             onClick={() => setDarkMode(!darkMode)}
             className="p-2 rounded-full border border-gray-300 dark:border-gray-700 text-black dark:text-white"
+            aria-label="Toggle Theme"
           >
             {darkMode ? <FiSun size={16} /> : <FiMoon size={16} />}
           </motion.button>
@@ -116,7 +125,8 @@ const Navbar = () => {
           {/* Mobile toggle */}
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden text-black dark:text-white"
+            className="md:hidden p-1 text-black dark:text-white"
+            aria-label="Toggle Menu"
           >
             {open ? <FiX size={22} /> : <FiMenu size={22} />}
           </button>
@@ -136,16 +146,17 @@ const Navbar = () => {
             <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-4">
               <ul className="flex flex-col gap-4">
                 {navItems.map((item) => (
-                  <button
-                    key={item.name}
-                    onClick={() => {
-                      scrollToSection(item.href);
-                      setOpen(false);
-                    }}
-                    className="text-left text-sm text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white"
-                  >
-                    {item.name}
-                  </button>
+                  <li key={item.name}>
+                    <button
+                      onClick={() => {
+                        scrollToSection(item.href);
+                        setOpen(false);
+                      }}
+                      className="w-full text-left text-sm text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white"
+                    >
+                      {item.name}
+                    </button>
+                  </li>
                 ))}
               </ul>
             </div>
