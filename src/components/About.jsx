@@ -2,8 +2,8 @@ import { motion } from "motion/react";
 
 const About = () => {
   return (
-    <section id="about" className="relative">
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-20">
+    <section id="about" className="relative scroll-mt-24">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
 
         {/* Section Header */}
         <motion.div
@@ -11,12 +11,12 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="mb-12"
+          className="mb-10 sm:mb-12"
         >
           <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-gray-900 dark:text-white">
-            About
+            About Mohan S Badiger
           </h2>
-          <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+          <p className="mt-2 text-sm sm:text-base text-gray-500 dark:text-gray-400">
             A quick professional overview
           </p>
         </motion.div>
@@ -30,7 +30,7 @@ const About = () => {
             hidden: {},
             visible: { transition: { staggerChildren: 0.12 } },
           }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-start"
         >
           {/* Left: Summary */}
           <motion.div
@@ -39,13 +39,13 @@ const About = () => {
               visible: { opacity: 1, y: 0 },
             }}
             transition={{ duration: 0.5 }}
-            className="text-gray-600 dark:text-gray-400 leading-relaxed"
+            className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm sm:text-base"
           >
             <p className="mb-4">
               I am a Full Stack Developer with hands-on experience building
-              scalable and maintainable web applications using the MERN stack.
-              I enjoy turning complex requirements into clean, practical
-              solutions.
+              scalable and maintainable web applications using the MERN stack
+              (React.js, Node.js, MongoDB, and Express). I enjoy turning complex
+              requirements into clean, practical solutions.
             </p>
 
             <p>
@@ -63,31 +63,39 @@ const About = () => {
               visible: { opacity: 1, y: 0 },
             }}
             transition={{ duration: 0.5 }}
-            className="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-black p-6 space-y-4"
+            className="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-black p-5 sm:p-6 space-y-4"
           >
-            <div className="flex justify-between">
-              <span className="text-sm text-gray-500">Location</span>
+            <div className="flex flex-col sm:flex-row sm:justify-between gap-1">
+              <span className="text-xs sm:text-sm text-gray-500">
+                Location
+              </span>
               <span className="text-sm font-medium text-gray-900 dark:text-white">
-                Bengaluru, India
+                Bengaluru, Karnataka, India
               </span>
             </div>
 
-            <div className="flex justify-between">
-              <span className="text-sm text-gray-500">Experience Level</span>
+            <div className="flex flex-col sm:flex-row sm:justify-between gap-1">
+              <span className="text-xs sm:text-sm text-gray-500">
+                Experience Level
+              </span>
               <span className="text-sm font-medium text-gray-900 dark:text-white">
                 Entry-level Full Stack Developer
               </span>
             </div>
 
-            <div className="flex justify-between">
-              <span className="text-sm text-gray-500">Primary Stack</span>
+            <div className="flex flex-col sm:flex-row sm:justify-between gap-1">
+              <span className="text-xs sm:text-sm text-gray-500">
+                Primary Stack
+              </span>
               <span className="text-sm font-medium text-gray-900 dark:text-white">
                 MERN Stack
               </span>
             </div>
 
-            <div className="flex justify-between">
-              <span className="text-sm text-gray-500">Availability</span>
+            <div className="flex flex-col sm:flex-row sm:justify-between gap-1">
+              <span className="text-xs sm:text-sm text-gray-500">
+                Availability
+              </span>
               <span className="text-sm font-medium text-gray-900 dark:text-white">
                 Open to Opportunities
               </span>

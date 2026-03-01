@@ -13,8 +13,8 @@ import {
 
 const Hero = () => {
   return (
-    <section className="relative">
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pt-10 pb-16">
+    <section className="relative scroll-mt-24">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 pb-16">
 
         {/* Main Content */}
         <motion.div
@@ -29,7 +29,7 @@ const Hero = () => {
               },
             },
           }}
-          className="flex flex-col gap-6"
+          className="flex flex-col gap-5 sm:gap-6"
         >
           {/* Greeting */}
           <motion.p
@@ -50,9 +50,9 @@ const Hero = () => {
               visible: { opacity: 1, y: 0 },
             }}
             transition={{ duration: 0.55 }}
-            className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-white"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-white leading-tight"
           >
-            Mohan Badiger
+            Mohan S Badiger
           </motion.h1>
 
           {/* Role */}
@@ -62,9 +62,9 @@ const Hero = () => {
               visible: { opacity: 1, y: 0 },
             }}
             transition={{ duration: 0.55 }}
-            className="text-lg sm:text-xl md:text-2xl font-medium text-gray-700 dark:text-gray-300"
+            className="text-base sm:text-lg md:text-2xl font-medium text-gray-700 dark:text-gray-300"
           >
-            Full Stack Developer <span className="text-gray-400">(MERN)</span>
+            Full Stack Developer <span className="text-gray-400">(MERN Stack)</span>
           </motion.h2>
 
           {/* Location + Socials */}
@@ -74,12 +74,12 @@ const Hero = () => {
               visible: { opacity: 1, y: 0 },
             }}
             transition={{ duration: 0.45 }}
-            className="flex flex-wrap items-center gap-5 text-sm text-gray-600 dark:text-gray-400"
+            className="flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-3 sm:gap-5 text-sm text-gray-600 dark:text-gray-400"
           >
             {/* Location */}
             <div className="flex items-center gap-1.5">
               <FiMapPin className="opacity-70" />
-              Bengaluru, India
+              Bengaluru, Karnataka, India
             </div>
 
             {/* Social Icons */}
@@ -132,11 +132,11 @@ const Hero = () => {
               visible: { opacity: 1, y: 0 },
             }}
             transition={{ duration: 0.55 }}
-            className="max-w-2xl text-base leading-relaxed text-gray-600 dark:text-gray-400"
+            className="max-w-2xl text-sm sm:text-base leading-relaxed text-gray-600 dark:text-gray-400"
           >
             I build scalable, performance-focused web applications using the
-            MERN stack, with strong emphasis on clean architecture, usability,
-            and maintainable code.
+            MERN stack (React.js, Node.js, MongoDB, Express), with strong emphasis
+            on clean architecture, usability, and maintainable code.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -146,11 +146,12 @@ const Hero = () => {
               visible: { opacity: 1, y: 0 },
             }}
             transition={{ duration: 0.5 }}
-            className="flex flex-wrap items-center gap-4 pt-3"
+            className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 pt-3"
           >
             <a
               href="/resume.pdf"
-              className="inline-flex items-center gap-2 rounded-full bg-gray-900 dark:bg-white px-6 py-3 text-sm font-medium text-white dark:text-black transition hover:opacity-90"
+              download
+              className="inline-flex justify-center items-center gap-2 rounded-full bg-gray-900 dark:bg-white px-6 py-3 text-sm font-medium text-white dark:text-black transition hover:opacity-90"
             >
               <FiDownload />
               Download CV
@@ -158,7 +159,7 @@ const Hero = () => {
 
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 rounded-full border border-gray-300 dark:border-gray-700 px-6 py-3 text-sm font-medium text-gray-900 dark:text-white transition hover:bg-gray-100 dark:hover:bg-gray-900"
+              className="inline-flex justify-center items-center gap-2 rounded-full border border-gray-300 dark:border-gray-700 px-6 py-3 text-sm font-medium text-gray-900 dark:text-white transition hover:bg-gray-100 dark:hover:bg-gray-900"
             >
               <FiMail />
               Contact Me
@@ -175,7 +176,7 @@ const Hero = () => {
         transition={{ duration: 1.1 }}
         className="pointer-events-none absolute inset-0 -z-10"
       >
-        <div className="absolute left-1/2 top-1/3 h-72 w-72 -translate-x-1/2 rounded-full bg-gray-200/60 dark:bg-gray-800/60 blur-3xl" />
+        <div className="absolute left-1/2 top-1/3 h-60 sm:h-72 w-60 sm:w-72 -translate-x-1/2 rounded-full bg-gray-200/60 dark:bg-gray-800/60 blur-3xl" />
       </motion.div>
     </section>
   );
