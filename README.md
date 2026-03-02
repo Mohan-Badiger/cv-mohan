@@ -8,7 +8,8 @@ This website presents my professional journey as a Full Stack Developer (MERN). 
 
 ## Live Preview
 
-Portfolio: https://mohanbadiger.site 
+Portfolio: https://mohanbadiger.site
+
 cv : https://mohanbadiger.info
 
 ## Tech Stack
