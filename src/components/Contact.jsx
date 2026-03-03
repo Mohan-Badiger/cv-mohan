@@ -15,7 +15,7 @@ const Contact = () => {
           className="mb-8 sm:mb-10"
         >
           <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-black dark:text-white">
-            Contact Mohan S Badiger
+            Contact Mohan Badiger
           </h2>
           <p className="mt-2 text-sm sm:text-base text-gray-500 dark:text-gray-400">
             Let’s connect and discuss opportunities

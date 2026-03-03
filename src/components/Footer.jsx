@@ -16,7 +16,7 @@ const Footer = () => {
 
           {/* Left */}
           <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">
-            © {new Date().getFullYear()} Mohan S Badiger. All rights reserved.
+            © {new Date().getFullYear()} Mohan Badiger. All rights reserved.
           </p>
 
           {/* Right */}
@@ -24,7 +24,7 @@ const Footer = () => {
             <a
               href="mailto:mohanbadiger250@gmail.com"
               className="text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white transition"
-              aria-label="Email Mohan S Badiger"
+              aria-label="Email Mohan Badiger"
             >
               <FiMail size={17} />
             </a>
@@ -34,7 +34,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white transition"
-              aria-label="Mohan S Badiger Portfolio Website"
+              aria-label="Mohan Badiger Portfolio Website"
             >
               <FiGlobe size={17} />
             </a>
