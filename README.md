@@ -1,4 +1,4 @@
-# Personal CV / Portfolio Website (React)
+# Personal CV Website (React)
 
 A modern, responsive CV / portfolio website built with React to showcase my professional profile, skills, experience, and projects. Designed with a clean UI, smooth UX, and performance-focused architecture.
 
