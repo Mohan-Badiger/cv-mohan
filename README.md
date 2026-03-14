@@ -1,4 +1,4 @@
-# Personal CV Website (React)
+# Personal CV Website (React/Next.js)
 
 A modern, responsive CV / portfolio website built with React to showcase my professional profile, skills, experience, and projects. Designed with a clean UI, smooth UX, and performance-focused architecture.
 
@@ -9,7 +9,6 @@ This website presents my professional journey as a Full Stack Developer (MERN). 
 ## Live Preview
 
 Portfolio: https://mohanbadiger.site
-
 cv : https://mohanbadiger.info
 
 ## Tech Stack
