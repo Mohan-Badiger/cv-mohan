@@ -34,7 +34,7 @@ cv : https://mohanbadiger.info
 Name: Mohan Badiger  
 Role: Full Stack Developer (MERN)  
 Location: Bengaluru, India  
-Availability: Open to Opportunities  
+Availability: Open to Work 
 
 ### Professional Summary
 
