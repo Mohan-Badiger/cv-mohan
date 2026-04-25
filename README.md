@@ -101,5 +101,4 @@ GitHub: https://github.com/Mohan-Badiger
 ## License
 
 This project is open-source and free to use for personal portfolio purposes.
-
 © 2026 Mohan Badiger
