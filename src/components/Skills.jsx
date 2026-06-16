@@ -59,9 +59,9 @@ const Skills = () => {
                 visible: { opacity: 1, y: 0 },
               }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              className="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-black p-6"
+              className="glass-card p-6"
             >
-              <h3 className="text-base font-medium text-black dark:text-white mb-4">
+              <h3 className="text-base font-semibold text-black dark:text-white mb-4">
                 {group.title}
               </h3>
 
@@ -69,7 +69,7 @@ const Skills = () => {
                 {group.items.map((skill) => (
                   <li
                     key={skill}
-                    className="rounded-full border border-gray-300 dark:border-gray-700 px-3 py-1 text-xs text-gray-700 dark:text-gray-300"
+                    className="rounded-full glass-pill px-3 py-1 text-xs text-gray-700 dark:text-gray-300 transition duration-300 hover:scale-105"
                   >
                     {skill}
                   </li>
