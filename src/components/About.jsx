@@ -32,14 +32,13 @@ const About = () => {
           }}
           className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-start"
         >
-          {/* Left: Summary */}
           <motion.div
             variants={{
               hidden: { opacity: 0, y: 18 },
               visible: { opacity: 1, y: 0 },
             }}
             transition={{ duration: 0.5 }}
-            className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm sm:text-base"
+            className="glass-card p-5 sm:p-6 text-gray-600 dark:text-gray-400 leading-relaxed text-sm sm:text-base"
           >
             <p className="mb-4">
               I am a Full Stack Developer with hands-on experience building
@@ -56,14 +55,13 @@ const About = () => {
             </p>
           </motion.div>
 
-          {/* Right: Quick Facts */}
           <motion.div
             variants={{
               hidden: { opacity: 0, y: 18 },
               visible: { opacity: 1, y: 0 },
             }}
             transition={{ duration: 0.5 }}
-            className="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-black p-5 sm:p-6 space-y-4"
+            className="glass-card p-5 sm:p-6 space-y-4"
           >
             <div className="flex flex-col sm:flex-row sm:justify-between gap-1">
               <span className="text-xs sm:text-sm text-gray-500">
