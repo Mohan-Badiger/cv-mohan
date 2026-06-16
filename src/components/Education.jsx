@@ -52,7 +52,7 @@ const Education = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              className="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-black p-5 sm:p-6"
+              className="glass-card p-5 sm:p-6"
             >
               <div className="flex flex-col gap-2">
                 <h3 className="text-base sm:text-lg font-medium text-black dark:text-white leading-snug">

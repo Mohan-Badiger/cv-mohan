@@ -28,7 +28,7 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-black p-6 sm:p-8"
+          className="glass-card p-6 sm:p-8"
         >
           <p className="mb-6 max-w-2xl text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
             I’m open to full-time roles, internships, and freelance opportunities.
@@ -40,7 +40,7 @@ const Contact = () => {
             {/* Email */}
             <a
               href="mailto:mohanbadiger250@gmail.com"
-              className="inline-flex justify-center items-center gap-2 rounded-full bg-black dark:bg-white px-6 py-3 text-sm font-medium text-white dark:text-black transition hover:opacity-80"
+              className="inline-flex justify-center items-center gap-2 rounded-full bg-black/90 dark:bg-white/90 text-white dark:text-black px-6 py-3 text-sm font-semibold shadow-md hover:shadow-lg hover:scale-105 active:scale-95 transition duration-300"
               aria-label="Email Mohan S Badiger"
             >
               <FiMail />
@@ -52,7 +52,7 @@ const Contact = () => {
               href="https://mohanbadiger.site"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex justify-center items-center gap-2 rounded-full border border-gray-300 dark:border-gray-700 px-6 py-3 text-sm font-medium text-black dark:text-white transition hover:bg-gray-100 dark:hover:bg-gray-900"
+              className="inline-flex justify-center items-center gap-2 rounded-full glass-pill px-6 py-3 text-sm font-semibold text-gray-900 dark:text-white hover:scale-105 active:scale-95 transition duration-300"
               aria-label="View Mohan S Badiger Portfolio Website"
             >
               <FiGlobe />
