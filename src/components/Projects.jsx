@@ -75,11 +75,11 @@ const Projects = () => {
                                 ease: "easeOut",
                                 delay: index * 0.05,
                             }}
-                            className="group rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-black p-6 sm:p-8 transition hover:border-black dark:hover:border-white"
+                            className="group glass-card p-6 sm:p-8"
                         >
                             {/* Title + Role */}
                             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                                <h3 className="text-lg sm:text-xl font-semibold text-black dark:text-white">
+                                <h3 className="text-lg sm:text-xl font-semibold text-black dark:text-white transition-colors duration-300 group-hover:text-pink-600 dark:group-hover:text-pink-400">
                                     {project.title}
                                 </h3>
                                 <span className="text-xs text-gray-500 dark:text-gray-400">
@@ -97,7 +97,7 @@ const Projects = () => {
                                 {project.tech.map((tech) => (
                                     <span
                                         key={tech}
-                                        className="rounded-full border border-gray-300 dark:border-gray-700 px-3 py-1 text-xs text-gray-700 dark:text-gray-300"
+                                        className="rounded-full glass-pill px-3 py-1 text-xs text-gray-700 dark:text-gray-300 transition duration-300 hover:scale-105"
                                     >
                                         {tech}
                                     </span>
@@ -111,7 +111,7 @@ const Projects = () => {
                                         href={project.github}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-flex items-center gap-1 text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition"
+                                        className="inline-flex items-center gap-1 text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition hover:scale-105 duration-200"
                                     >
                                         <FiGithub />
                                         Code
@@ -123,7 +123,7 @@ const Projects = () => {
                                         href={project.live}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-flex items-center gap-1 text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition"
+                                        className="inline-flex items-center gap-1 text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition hover:scale-105 duration-200"
                                     >
                                         <FiExternalLink />
                                         Live

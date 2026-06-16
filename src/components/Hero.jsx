@@ -83,31 +83,31 @@ const Hero = () => {
             </div>
 
             {/* Social Icons */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
               {[
                 {
                   href: "https://mohanbadiger.site",
-                  icon: <FiGlobe size={17} />,
+                  icon: <FiGlobe size={16} />,
                   label: "Portfolio",
                 },
                 {
                   href: "https://github.com/Mohan-Badiger",
-                  icon: <FaGithub size={17} />,
+                  icon: <FaGithub size={16} />,
                   label: "GitHub",
                 },
                 {
                   href: "https://www.linkedin.com/in/mohan-badiger",
-                  icon: <FaLinkedin size={17} />,
+                  icon: <FaLinkedin size={16} />,
                   label: "LinkedIn",
                 },
                 {
                   href: "mailto:mohanbadiger250@gmail.com",
-                  icon: <FiMail size={17} />,
+                  icon: <FiMail size={16} />,
                   label: "Email",
                 },
                 {
                   href: "https://www.instagram.com/mohan_badiger250",
-                  icon: <FaInstagram size={17} />,
+                  icon: <FaInstagram size={16} />,
                   label: "Instagram",
                 },
               ].map((item) => (
@@ -117,7 +117,7 @@ const Hero = () => {
                   target={item.href.startsWith("http") ? "_blank" : undefined}
                   rel="noopener noreferrer"
                   aria-label={item.label}
-                  className="transition text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+                  className="p-2.5 rounded-full glass-pill text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white hover:scale-110 active:scale-95 transition duration-300"
                 >
                   {item.icon}
                 </a>
@@ -151,15 +151,15 @@ const Hero = () => {
             <a
               href="/resume.pdf"
               download
-              className="inline-flex justify-center items-center gap-2 rounded-full bg-gray-900 dark:bg-white px-6 py-3 text-sm font-medium text-white dark:text-black transition hover:opacity-90"
+              className="inline-flex justify-center items-center gap-2 rounded-full bg-black/90 dark:bg-white/90 text-white dark:text-black px-6 py-3 text-sm font-semibold shadow-md hover:shadow-lg hover:scale-105 active:scale-95 transition duration-300"
             >
-              <FiDownload />
+              <FiDownload className="stroke-[2.5]" />
               Download CV
             </a>
 
             <a
               href="#contact"
-              className="inline-flex justify-center items-center gap-2 rounded-full border border-gray-300 dark:border-gray-700 px-6 py-3 text-sm font-medium text-gray-900 dark:text-white transition hover:bg-gray-100 dark:hover:bg-gray-900"
+              className="inline-flex justify-center items-center gap-2 rounded-full glass-pill px-6 py-3 text-sm font-semibold text-gray-900 dark:text-white hover:scale-105 active:scale-95 transition duration-300"
             >
               <FiMail />
               Contact Me
