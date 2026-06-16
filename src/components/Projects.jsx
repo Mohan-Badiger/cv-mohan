@@ -43,8 +43,8 @@ const projects = [
 
 const Projects = () => {
     return (
-        <section id="projects" className="relative">
-            <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-20">
+        <section id="projects" className="relative scroll-mt-24">
+            <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
 
                 {/* Section Header */}
                 <motion.div

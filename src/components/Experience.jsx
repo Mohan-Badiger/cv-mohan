@@ -25,8 +25,8 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="relative">
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-8">
+    <section id="experience" className="relative scroll-mt-24">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
 
         {/* Section Header */}
         <motion.div
@@ -60,7 +60,7 @@ const Experience = () => {
                 className="relative pl-12"
               >
                 {/* Dot */}
-                <span className="absolute left-8 top-2.5 h-2 w-2 rounded-full bg-black dark:bg-slate-200" />
+                <span className="absolute left-3 top-2.5 h-2 w-2 rounded-full bg-black dark:bg-slate-200" />
 
                 {/* Content */}
                 <div className="flex flex-col gap-2">
