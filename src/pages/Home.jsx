@@ -10,7 +10,7 @@ import Projects from "../components/Projects";
 
 const Home = () => {
   return (
-    <main className="bg-white dark:bg-black text-gray-900 dark:text-white">
+    <div className="bg-white dark:bg-black text-gray-900 dark:text-white">
       <Hero />
       <Activity />
       <About />
@@ -20,7 +20,7 @@ const Home = () => {
       <Skills />
       <Contact />
       <Footer />
-    </main>
+    </div>
   );
 };
 
