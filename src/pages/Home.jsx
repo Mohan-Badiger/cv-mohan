@@ -10,7 +10,7 @@ import Projects from "../components/Projects";
 
 const Home = () => {
   return (
-    <div className="bg-white dark:bg-black text-gray-900 dark:text-white">
+    <div className="bg-transparent text-gray-900 dark:text-white">
       <Hero />
       <Activity />
       <About />

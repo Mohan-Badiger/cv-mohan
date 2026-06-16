@@ -91,11 +91,10 @@ const Navbar = () => {
               <li key={item.name} className="relative">
                 <button
                   onClick={() => scrollToSection(item.href)}
-                  className={`text-sm transition ${
-                    isActive
+                  className={`text-sm transition ${isActive
                       ? "text-black dark:text-white"
                       : "text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
-                  }`}
+                    }`}
                 >
                   {item.name}
                 </button>
@@ -103,7 +102,7 @@ const Navbar = () => {
                 {isActive && (
                   <motion.span
                     layoutId="nav-underline"
-                    className="absolute -bottom-2 left-0 h-[2px] w-full bg-black dark:bg-white"
+                    className="absolute -bottom-2 left-0 h-0.5 w-full bg-black dark:bg-white"
                   />
                 )}
               </li>
