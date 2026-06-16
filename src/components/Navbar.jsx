@@ -3,11 +3,12 @@ import { motion, AnimatePresence } from "motion/react";
 import { FiSun, FiMoon, FiMenu, FiX } from "react-icons/fi";
 
 const navItems = [
+  { name: "Activity", href: "#activity" },
   { name: "About", href: "#about" },
   { name: "Experience", href: "#experience" },
+  { name: "Projects", href: "#projects" },
   { name: "Education", href: "#education" },
   { name: "Skills", href: "#skills" },
-  { name: "Activity", href: "#activity" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -102,7 +103,7 @@ const Navbar = () => {
                 {isActive && (
                   <motion.span
                     layoutId="nav-underline"
-                    className="absolute -bottom-2 left-0 h-2px w-full bg-black dark:bg-white"
+                    className="absolute -bottom-2 left-0 h-[2px] w-full bg-black dark:bg-white"
                   />
                 )}
               </li>
