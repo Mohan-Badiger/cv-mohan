@@ -47,9 +47,9 @@ const Experience = () => {
         {/* Timeline */}
         <div className="relative">
           {/* Vertical line */}
-          <div className="absolute left-4 top-0 h-full w-px bg-gray-200 dark:bg-gray-800" />
+          <div className="absolute left-4 top-0 h-full w-0.5 bg-black/10 dark:bg-white/10 backdrop-blur-xs" />
 
-          <div className="space-y-12">
+          <div className="space-y-8">
             {experiences.map((exp, index) => (
               <motion.div
                 key={index}
@@ -57,24 +57,24 @@ const Experience = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                className="relative pl-12"
+                className="relative pl-10 sm:pl-12"
               >
                 {/* Dot */}
-                <span className="absolute left-3 top-2.5 h-2 w-2 rounded-full bg-black dark:bg-slate-200" />
+                <span className="absolute left-2.5 top-6.5 z-10 h-3.5 w-3.5 rounded-full border-2 border-black bg-white dark:border-white dark:bg-black shadow-xs transition-transform duration-300 hover:scale-125" />
 
-                {/* Content */}
-                <div className="flex flex-col gap-2">
-                  <h3 className="text-base sm:text-lg font-medium text-black dark:text-white">
+                {/* Content Card */}
+                <div className="glass-card p-5 sm:p-6">
+                  <h3 className="text-base sm:text-lg font-semibold text-black dark:text-white">
                     {exp.role}
                   </h3>
 
-                  <div className="flex flex-wrap items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
-                    <span>{exp.company}</span>
+                  <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-gray-500 dark:text-gray-400 mt-1">
+                    <span className="font-medium">{exp.company}</span>
                     <span>•</span>
                     <span>{exp.period}</span>
                   </div>
 
-                  <ul className="mt-3 list-disc pl-5 text-sm text-gray-700 dark:text-gray-300 space-y-1">
+                  <ul className="mt-3 list-disc pl-5 text-xs sm:text-sm text-gray-600 dark:text-gray-300 space-y-1.5 leading-relaxed">
                     {exp.description.map((point, i) => (
                       <li key={i}>{point}</li>
                     ))}
