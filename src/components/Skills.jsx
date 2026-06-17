@@ -1,21 +1,30 @@
 import { motion } from "motion/react";
+import { FiLayout, FiServer, FiDatabase, FiSliders } from "react-icons/fi";
 
 const skills = [
   {
     title: "Frontend",
-    items: ["React", "JavaScript", "HTML5", "CSS3", "Tailwind CSS"],
+    icon: <FiLayout className="text-pink-500" size={20} />,
+    items: ["React.js", "JavaScript (ES6+)", "HTML5", "CSS3", "Tailwind CSS"],
+    hoverGlow: "hover:border-pink-500/30",
   },
   {
     title: "Backend",
-    items: ["Node.js", "Express.js", "REST APIs", "Authentication"],
+    icon: <FiServer className="text-indigo-500" size={20} />,
+    items: ["Node.js", "Express.js", "RESTful APIs", "JWT Auth"],
+    hoverGlow: "hover:border-indigo-500/30",
   },
   {
     title: "Database",
+    icon: <FiDatabase className="text-cyan-500" size={20} />,
     items: ["MongoDB", "Mongoose", "PostgreSQL"],
+    hoverGlow: "hover:border-cyan-500/30",
   },
   {
     title: "Tools & Practices",
-    items: ["Git & GitHub", "Postman", "VS Code", "Clean Code"],
+    icon: <FiSliders className="text-emerald-500" size={20} />,
+    items: ["Git & GitHub", "Postman API", "VS Code", "Clean Code"],
+    hoverGlow: "hover:border-emerald-500/30",
   },
 ];
 
@@ -32,22 +41,22 @@ const Skills = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="mb-12"
         >
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-black dark:text-white">
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
             Skills
           </h2>
-          <p className="mt-2 text-sm text-gray-500 dark:text-gray-500">
-            Technologies and tools I work with
+          <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+            Technologies and tools I specialize in
           </p>
         </motion.div>
 
-        {/* Skill Cards */}
+        {/* Skills Grid */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={{
             hidden: {},
-            visible: { transition: { staggerChildren: 0.15 } },
+            visible: { transition: { staggerChildren: 0.1 } },
           }}
           className="grid grid-cols-1 sm:grid-cols-2 gap-6"
         >
@@ -59,22 +68,31 @@ const Skills = () => {
                 visible: { opacity: 1, y: 0 },
               }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              className="glass-card p-6"
+              className={`group glass-card p-6 flex flex-col justify-between hover:scale-[1.01] transition-all duration-350 border border-black/10 dark:border-white/10`}
             >
-              <h3 className="text-base font-semibold text-black dark:text-white mb-4">
-                {group.title}
-              </h3>
+              <div>
+                {/* Header */}
+                <div className="flex items-center gap-3 border-b border-gray-200/40 dark:border-white/5 pb-4 mb-5">
+                  <div className="p-2.5 bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 flex items-center justify-center shrink-0">
+                    {group.icon}
+                  </div>
+                  <h3 className="text-base sm:text-lg font-bold text-gray-900 dark:text-white">
+                    {group.title}
+                  </h3>
+                </div>
 
-              <ul className="flex flex-wrap gap-2">
-                {group.items.map((skill) => (
-                  <li
-                    key={skill}
-                    className="rounded-full glass-pill px-3 py-1 text-xs text-gray-700 dark:text-gray-300 transition duration-300 hover:scale-105"
-                  >
-                    {skill}
-                  </li>
-                ))}
-              </ul>
+                {/* Items */}
+                <ul className="flex flex-wrap gap-2.5">
+                  {group.items.map((skill) => (
+                    <li
+                      key={skill}
+                      className={`rounded-none glass-pill px-3.5 py-1.5 text-xs font-semibold text-gray-600 dark:text-gray-300 hover:scale-105 transition duration-300 border border-black/10 dark:border-white/10`}
+                    >
+                      {skill}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </motion.div>
           ))}
         </motion.div>
