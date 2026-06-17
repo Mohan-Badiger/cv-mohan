@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { FiCheckCircle, FiCalendar, FiBriefcase } from "react-icons/fi";
 
 const experiences = [
   {
@@ -7,8 +8,8 @@ const experiences = [
     period: "2024 – Present",
     description: [
       "Developed full-stack web applications using MongoDB, Express, React, and Node.js.",
-      "Implemented authentication, role-based access, and REST APIs.",
-      "Built responsive UIs with Tailwind CSS and ensured cross-browser compatibility.",
+      "Implemented secure authentication, role-based access control, and REST APIs.",
+      "Built responsive layouts with Tailwind CSS, ensuring cross-browser compatibility.",
     ],
   },
   {
@@ -16,9 +17,9 @@ const experiences = [
     company: "Academic Projects",
     period: "2023 – 2024",
     description: [
-      "Created modern React interfaces with reusable components.",
-      "Integrated APIs and handled state management effectively.",
-      "Focused on clean UI, accessibility, and performance optimization.",
+      "Created modern React interfaces with modular, reusable components.",
+      "Integrated REST APIs and handled frontend state management effectively.",
+      "Focused on clean typography, accessibility, and performance optimizations.",
     ],
   },
 ];
@@ -36,47 +37,61 @@ const Experience = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="mb-12"
         >
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-black dark:text-white">
-            Experience
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
+            Work Experience
           </h2>
-          <p className="mt-2 text-sm text-gray-500 dark:text-gray-500">
-            Professional and project experience
+          <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+            Professional journey and technical projects
           </p>
         </motion.div>
 
         {/* Timeline */}
-        <div className="relative">
-          {/* Vertical line */}
-          <div className="absolute left-4 top-0 h-full w-0.5 bg-black/10 dark:bg-white/10 backdrop-blur-xs" />
+        <div className="relative pl-1">
+          {/* Vertical Track - Heavy Solid Line */}
+          <div className="absolute left-4 sm:left-5 top-2 bottom-2 w-0.5 bg-black/15 dark:bg-white/10" />
 
-          <div className="space-y-8">
+          <div className="space-y-10">
             {experiences.map((exp, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-                className="relative pl-10 sm:pl-12"
+                transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.1 }}
+                className="relative pl-10 sm:pl-14"
               >
-                {/* Dot */}
-                <span className="absolute left-2.5 top-6.5 z-10 h-3.5 w-3.5 rounded-full border-2 border-black bg-white dark:border-white dark:bg-black shadow-xs transition-transform duration-300 hover:scale-125" />
+                {/* Timeline Boxy Pulse Node */}
+                <span className="absolute left-2.5 sm:left-3.5 top-6 z-10 flex h-3.5 w-3.5 items-center justify-center">
+                  <span className="animate-ping absolute inline-flex h-full w-full bg-indigo-400 opacity-75" />
+                  <span className="relative inline-flex h-2.5 w-2.5 bg-indigo-600 dark:bg-indigo-400 border border-white dark:border-black" />
+                </span>
 
-                {/* Content Card */}
-                <div className="glass-card p-5 sm:p-6">
-                  <h3 className="text-base sm:text-lg font-semibold text-black dark:text-white">
-                    {exp.role}
-                  </h3>
+                {/* Card Container */}
+                <div className="glass-card p-6 hover:scale-[1.005] transition-all duration-300">
+                  <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-gray-200/40 dark:border-white/5 pb-4">
+                    <div>
+                      <h3 className="text-lg font-bold text-gray-900 dark:text-white flex items-center gap-2">
+                        <FiBriefcase className="text-indigo-500 shrink-0" size={18} />
+                        {exp.role}
+                      </h3>
+                      <p className="text-sm font-semibold text-gray-700 dark:text-gray-300 mt-1 pl-6">
+                        {exp.company}
+                      </p>
+                    </div>
 
-                  <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-gray-500 dark:text-gray-400 mt-1">
-                    <span className="font-medium">{exp.company}</span>
-                    <span>•</span>
-                    <span>{exp.period}</span>
+                    <div className="inline-flex items-center gap-2 rounded-none glass-pill px-3 py-1.5 text-xs font-semibold text-gray-500 dark:text-gray-400 max-w-max self-start md:self-center border border-black/10 dark:border-white/5">
+                      <FiCalendar size={13} className="text-pink-500" />
+                      {exp.period}
+                    </div>
                   </div>
 
-                  <ul className="mt-3 list-disc pl-5 text-xs sm:text-sm text-gray-600 dark:text-gray-300 space-y-1.5 leading-relaxed">
+                  {/* Bullet points */}
+                  <ul className="mt-4 space-y-3 pl-6">
                     {exp.description.map((point, i) => (
-                      <li key={i}>{point}</li>
+                      <li key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                        <FiCheckCircle className="text-emerald-500 mt-1 shrink-0" size={15} />
+                        <span>{point}</span>
+                      </li>
                     ))}
                   </ul>
                 </div>
