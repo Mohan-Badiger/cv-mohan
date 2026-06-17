@@ -1,5 +1,4 @@
 import { motion } from "motion/react";
-import { FiMapPin, FiBriefcase, FiCpu, FiCalendar } from "react-icons/fi";
 
 const About = () => {
   return (
@@ -60,7 +59,7 @@ const About = () => {
               </p>
             </div>
             <div className="mt-6 border-t border-gray-200/40 dark:border-white/5 pt-4">
-              <span className="text-xs font-bold uppercase text-indigo-600 dark:text-indigo-400 tracking-wider">
+              <span className="text-xs font-bold uppercase text-gray-800 dark:text-gray-200 tracking-wider">
                 Solving problems through codebase logic
               </span>
             </div>
@@ -79,31 +78,24 @@ const About = () => {
               {
                 label: "Location",
                 value: "Bengaluru, Karnataka, India",
-                icon: <FiMapPin className="text-pink-500" size={18} />,
               },
               {
                 label: "Experience Level",
                 value: "Entry-level Developer",
-                icon: <FiBriefcase className="text-indigo-500" size={18} />,
               },
               {
                 label: "Primary Stack",
                 value: "MERN Stack (MongoDB, React)",
-                icon: <FiCpu className="text-cyan-500" size={18} />,
               },
               {
                 label: "Availability",
                 value: "Open to Opportunities",
-                icon: <FiCalendar className="text-emerald-500" size={18} />,
               },
             ].map((stat, idx) => (
               <div
                 key={idx}
-                className="glass-card p-4 sm:p-5 flex items-center gap-4 hover:scale-[1.02] transition-all duration-300"
+                className="glass-card p-4 sm:p-5 flex flex-col justify-center hover:scale-[1.02] transition-all duration-300"
               >
-                <div className="p-3 bg-black/5 dark:bg-white/5 flex items-center justify-center shrink-0 border border-black/10 dark:border-white/10">
-                  {stat.icon}
-                </div>
                 <div className="flex flex-col min-w-0">
                   <span className="text-[10px] text-gray-400 dark:text-gray-500 uppercase font-bold tracking-wider">
                     {stat.label}
