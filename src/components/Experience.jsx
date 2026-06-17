@@ -1,5 +1,4 @@
 import { motion } from "motion/react";
-import { FiCheckCircle, FiCalendar, FiBriefcase } from "react-icons/fi";
 
 const experiences = [
   {
@@ -62,34 +61,32 @@ const Experience = () => {
               >
                 {/* Timeline Boxy Pulse Node */}
                 <span className="absolute left-2.5 sm:left-3.5 top-6 z-10 flex h-3.5 w-3.5 items-center justify-center">
-                  <span className="animate-ping absolute inline-flex h-full w-full bg-indigo-400 opacity-75" />
-                  <span className="relative inline-flex h-2.5 w-2.5 bg-indigo-600 dark:bg-indigo-400 border border-white dark:border-black" />
+                  <span className="animate-ping absolute inline-flex h-full w-full bg-gray-400/50 dark:bg-white/20 opacity-75" />
+                  <span className="relative inline-flex h-2.5 w-2.5 bg-black dark:bg-white border border-white dark:border-black" />
                 </span>
 
                 {/* Card Container */}
                 <div className="glass-card p-6 hover:scale-[1.005] transition-all duration-300">
                   <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-gray-200/40 dark:border-white/5 pb-4">
                     <div>
-                      <h3 className="text-lg font-bold text-gray-900 dark:text-white flex items-center gap-2">
-                        <FiBriefcase className="text-indigo-500 shrink-0" size={18} />
+                      <h3 className="text-lg font-bold text-gray-900 dark:text-white">
                         {exp.role}
                       </h3>
-                      <p className="text-sm font-semibold text-gray-700 dark:text-gray-300 mt-1 pl-6">
+                      <p className="text-sm font-semibold text-gray-700 dark:text-gray-300 mt-1">
                         {exp.company}
                       </p>
                     </div>
 
                     <div className="inline-flex items-center gap-2 rounded-none glass-pill px-3 py-1.5 text-xs font-semibold text-gray-500 dark:text-gray-400 max-w-max self-start md:self-center border border-black/10 dark:border-white/5">
-                      <FiCalendar size={13} className="text-pink-500" />
                       {exp.period}
                     </div>
                   </div>
 
                   {/* Bullet points */}
-                  <ul className="mt-4 space-y-3 pl-6">
+                  <ul className="mt-4 space-y-3 pl-2">
                     {exp.description.map((point, i) => (
                       <li key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-                        <FiCheckCircle className="text-emerald-500 mt-1 shrink-0" size={15} />
+                        <span className="text-gray-400 dark:text-gray-600 shrink-0 select-none">•</span>
                         <span>{point}</span>
                       </li>
                     ))}

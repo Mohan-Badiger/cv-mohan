@@ -4,27 +4,27 @@ import { FiLayout, FiServer, FiDatabase, FiSliders } from "react-icons/fi";
 const skills = [
   {
     title: "Frontend",
-    icon: <FiLayout className="text-pink-500" size={20} />,
+    icon: <FiLayout className="text-black dark:text-white" size={20} />,
     items: ["React.js", "JavaScript (ES6+)", "HTML5", "CSS3", "Tailwind CSS"],
-    hoverGlow: "hover:border-pink-500/30",
+    hoverGlow: "hover:border-black/30",
   },
   {
     title: "Backend",
-    icon: <FiServer className="text-indigo-500" size={20} />,
+    icon: <FiServer className="text-black dark:text-white" size={20} />,
     items: ["Node.js", "Express.js", "RESTful APIs", "JWT Auth"],
-    hoverGlow: "hover:border-indigo-500/30",
+    hoverGlow: "hover:border-black/30",
   },
   {
     title: "Database",
-    icon: <FiDatabase className="text-cyan-500" size={20} />,
+    icon: <FiDatabase className="text-black dark:text-white" size={20} />,
     items: ["MongoDB", "Mongoose", "PostgreSQL"],
-    hoverGlow: "hover:border-cyan-500/30",
+    hoverGlow: "hover:border-black/30",
   },
   {
     title: "Tools & Practices",
-    icon: <FiSliders className="text-emerald-500" size={20} />,
+    icon: <FiSliders className="text-black dark:text-white" size={20} />,
     items: ["Git & GitHub", "Postman API", "VS Code", "Clean Code"],
-    hoverGlow: "hover:border-emerald-500/30",
+    hoverGlow: "hover:border-black/30",
   },
 ];
 
