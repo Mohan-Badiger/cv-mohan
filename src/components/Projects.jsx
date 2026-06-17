@@ -92,7 +92,7 @@ const Projects = () => {
                 </div>
 
                 {/* Title */}
-                <h3 className="mt-4 text-lg font-bold text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-350">
+                <h3 className="mt-4 text-lg font-bold text-gray-900 dark:text-white group-hover:text-black dark:group-hover:text-white transition-colors duration-350">
                   {project.title}
                 </h3>
 
