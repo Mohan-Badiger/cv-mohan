@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { FiBookOpen, FiAward, FiCheckCircle } from "react-icons/fi";
+import { FiBookOpen, FiAward } from "react-icons/fi";
 
 const education = [
   {
@@ -11,7 +11,7 @@ const education = [
       "Completed hands-on projects using modern full-stack web technologies.",
       "Specialized study in software engineering, database management, and networking.",
     ],
-    icon: <FiAward size={20} className="text-pink-500" />,
+    icon: <FiAward size={20} className="text-black dark:text-white" />,
   },
   {
     degree: "Pre-University / Higher Secondary (12th)",
@@ -21,7 +21,7 @@ const education = [
       "Specialization in Computer Science and mathematics streams.",
       "Developed solid foundations in logical thinking and analytical problem-solving.",
     ],
-    icon: <FiBookOpen size={20} className="text-indigo-500" />,
+    icon: <FiBookOpen size={20} className="text-black dark:text-white" />,
   },
 ];
 
@@ -82,7 +82,7 @@ const Education = () => {
                 <ul className="mt-4 space-y-2.5">
                   {edu.highlights.map((point, i) => (
                     <li key={i} className="flex items-start gap-2 text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-                      <FiCheckCircle className="text-emerald-500 mt-1 shrink-0" size={14} />
+                      <span className="text-gray-400 dark:text-gray-600 shrink-0 select-none">•</span>
                       <span>{point}</span>
                     </li>
                   ))}
