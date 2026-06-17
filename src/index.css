@@ -7,7 +7,7 @@
 
   color-scheme: light dark;
   color: rgba(0, 0, 0, 0.85);
-  background-color: #f0f0f3; /* Softer base for light mode liquid view */
+  background-color: #f3f4f6; /* Softer base for light mode boxy view */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -17,7 +17,7 @@
 
 .dark {
   color: rgba(255, 255, 255, 0.95);
-  background-color: #030304; /* True black/dark OLED canvas */
+  background-color: #0c0c0e; /* Solid dark background */
 }
 
 html {
@@ -28,172 +28,84 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Outfit', system-ui, -apple-system, sans-serif;
 }
 
-/* ===== iOS style liquid glassmorphism classes ===== */
+/* ===== Boxy Solid Panels ===== */
+
+/* Override all border-radii globally for cards, buttons, pills, and tooltips */
+.glass-card, 
+.glass-pill, 
+.rounded-full, 
+.rounded-2xl, 
+.rounded-3xl,
+.rounded-md,
+.rounded-lg,
+.rounded-sm {
+  border-radius: 0px !important;
+}
 
 .glass-card {
   position: relative;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0.08) 100%);
-  backdrop-filter: blur(30px) saturate(210%);
-  -webkit-backdrop-filter: blur(30px) saturate(210%);
-  border: 1px solid rgba(255, 255, 255, 0.45);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.2) 100%);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1.5px solid rgba(0, 0, 0, 0.12);
   box-shadow: 
-    0 10px 30px -10px rgba(0, 0, 0, 0.03),
-    inset 0 1px 2px rgba(255, 255, 255, 0.5),
-    inset 0 -1px 1px rgba(0, 0, 0, 0.02);
-  border-radius: 1.75rem; /* ~28px - sleek rounded corners */
-  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    4px 4px 0px 0px rgba(0, 0, 0, 0.05),
+    inset 0 1px 1px rgba(255, 255, 255, 0.5);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   overflow: hidden;
 }
 
-/* Glass Reflection Shine Overlay Effect */
-.glass-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -50%;
-  width: 200%;
-  height: 100%;
-  background: linear-gradient(
-    30deg,
-    rgba(255, 255, 255, 0) 30%,
-    rgba(255, 255, 255, 0.18) 40%,
-    rgba(255, 255, 255, 0.25) 50%,
-    rgba(255, 255, 255, 0.18) 60%,
-    rgba(255, 255, 255, 0) 70%
-  );
-  transform: rotate(-10deg);
-  opacity: 0.8;
-  pointer-events: none;
-  transition: all 0.8s ease;
-}
-
-.glass-card:hover::before {
-  left: 100%;
-  transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
 .glass-card:hover {
-  transform: translateY(-4px) scale(1.01);
-  border-color: rgba(255, 255, 255, 0.75);
+  transform: translateY(-4px) translate-x(-2px);
+  border-color: rgba(0, 0, 0, 0.25);
   box-shadow: 
-    0 24px 48px -15px rgba(139, 92, 246, 0.12), /* Violet glow */
-    0 12px 24px -10px rgba(236, 72, 153, 0.08),  /* Pink glow */
-    inset 0 1px 2px rgba(255, 255, 255, 0.6);
+    6px 6px 0px 0px rgba(139, 92, 246, 0.25);
 }
 
 .dark .glass-card {
-  background: linear-gradient(135deg, rgba(22, 22, 28, 0.45) 0%, rgba(10, 10, 15, 0.15) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: linear-gradient(135deg, rgba(24, 24, 30, 0.75) 0%, rgba(15, 15, 20, 0.55) 100%);
+  border-color: rgba(255, 255, 255, 0.12);
   box-shadow: 
-    0 16px 40px -15px rgba(0, 0, 0, 0.6),
-    inset 0 1px 1px rgba(255, 255, 255, 0.18),
-    inset 0 -1px 1px rgba(0, 0, 0, 0.4);
-}
-
-.dark .glass-card::before {
-  background: linear-gradient(
-    30deg,
-    rgba(255, 255, 255, 0) 35%,
-    rgba(255, 255, 255, 0.05) 45%,
-    rgba(255, 255, 255, 0.08) 50%,
-    rgba(255, 255, 255, 0.05) 55%,
-    rgba(255, 255, 255, 0) 65%
-  );
+    4px 4px 0px 0px rgba(0, 0, 0, 0.45),
+    inset 0 1px 1px rgba(255, 255, 255, 0.15);
 }
 
 .dark .glass-card:hover {
-  border-color: rgba(255, 255, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.25);
   box-shadow: 
-    0 30px 60px -15px rgba(0, 0, 0, 0.8),
-    0 15px 30px -10px rgba(139, 92, 246, 0.25), /* Vibrant violet glow in dark mode */
-    inset 0 1px 1px rgba(255, 255, 255, 0.25);
+    6px 6px 0px 0px rgba(139, 92, 246, 0.45);
 }
 
 .glass-pill {
   position: relative;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.05) 100%);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  box-shadow: 
-    0 4px 12px rgba(0, 0, 0, 0.02),
-    inset 0 1px 1px rgba(255, 255, 255, 0.4);
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.15) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .dark .glass-pill {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 
-    0 6px 16px rgba(0, 0, 0, 0.3),
-    inset 0 1px 0px rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.12);
 }
 
 .glass-pill:hover {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.1) 100%);
-  border-color: rgba(255, 255, 255, 0.55);
-  transform: translateY(-1px) scale(1.03);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.25) 100%);
+  border-color: rgba(0, 0, 0, 0.2);
+  transform: translateY(-1.5px) scale(1.02);
   box-shadow: 
-    0 8px 16px rgba(139, 92, 246, 0.1),
-    inset 0 1px 1px rgba(255, 255, 255, 0.6);
+    3px 3px 0px 0px rgba(139, 92, 246, 0.15);
 }
 
 .dark .glass-pill:hover {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.05) 100%);
-  border-color: rgba(255, 255, 255, 0.25);
-  transform: translateY(-1px) scale(1.03);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1.5px) scale(1.02);
   box-shadow: 
-    0 8px 20px rgba(139, 92, 246, 0.2);
+    3px 3px 0px 0px rgba(139, 92, 246, 0.3);
 }
 
-/* ===== Liquid Morphing Animations ===== */
-
-@keyframes morph-1 {
-  0%, 100% {
-    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
-    transform: translate(0, 0) scale(1) rotate(0deg);
-  }
-  33% {
-    border-radius: 70% 30% 52% 48% / 60% 40% 60% 40%;
-    transform: translate(80px, 60px) scale(1.15) rotate(120deg);
-  }
-  66% {
-    border-radius: 28% 72% 37% 63% / 40% 60% 40% 60%;
-    transform: translate(-60px, 90px) scale(0.9) rotate(240deg);
-  }
-}
-
-@keyframes morph-2 {
-  0%, 100% {
-    border-radius: 70% 30% 52% 48% / 60% 40% 60% 40%;
-    transform: translate(0, 0) scale(1.1) rotate(0deg);
-  }
-  50% {
-    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
-    transform: translate(-90px, -40px) scale(0.85) rotate(-180deg);
-  }
-}
-
-@keyframes morph-3 {
-  0%, 100% {
-    border-radius: 28% 72% 37% 63% / 40% 60% 40% 60%;
-    transform: translate(0, 0) scale(0.9) rotate(0deg);
-  }
-  50% {
-    border-radius: 60% 40% 70% 30% / 50% 50% 50% 50%;
-    transform: translate(60px, -80px) scale(1.15) rotate(180deg);
-  }
-}
-
-.animate-morph-1 {
-  animation: morph-1 25s infinite alternate ease-in-out;
-}
-.animate-morph-2 {
-  animation: morph-2 30s infinite alternate ease-in-out;
-}
-.animate-morph-3 {
-  animation: morph-3 22s infinite alternate ease-in-out;
-}
 
 /* ===== Modern Thin Scrollbar ===== */
 
