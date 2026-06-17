@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { FiMapPin, FiBriefcase, FiCpu, FiCalendar } from "react-icons/fi";
 
 const About = () => {
   return (
@@ -13,7 +14,7 @@ const About = () => {
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="mb-10 sm:mb-12"
         >
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-gray-900 dark:text-white">
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
             About Me
           </h2>
           <p className="mt-2 text-sm sm:text-base text-gray-500 dark:text-gray-400">
@@ -21,83 +22,98 @@ const About = () => {
           </p>
         </motion.div>
 
-        {/* Content */}
+        {/* Content Grid */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={{
             hidden: {},
-            visible: { transition: { staggerChildren: 0.12 } },
+            visible: { transition: { staggerChildren: 0.1 } },
           }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-start"
+          className="grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 items-stretch"
         >
+          {/* Left card: Description */}
           <motion.div
             variants={{
               hidden: { opacity: 0, y: 18 },
               visible: { opacity: 1, y: 0 },
             }}
             transition={{ duration: 0.5 }}
-            className="glass-card p-5 sm:p-6 text-gray-600 dark:text-gray-400 leading-relaxed text-sm sm:text-base"
+            className="glass-card p-6 sm:p-8 text-gray-600 dark:text-gray-400 leading-relaxed text-sm sm:text-base md:col-span-7 flex flex-col justify-between"
           >
-            <p className="mb-4">
-              I am a Full Stack Developer with hands-on experience building
-              scalable and maintainable web applications using the MERN stack
-              (React.js, Node.js, MongoDB, and Express). I enjoy turning complex
-              requirements into clean, practical solutions.
-            </p>
-
-            <p>
-              I focus on writing quality code with attention to performance,
-              usability, and long-term maintainability. I’m motivated to work
-              on meaningful projects where technology solves real-world
-              problems and helps users effectively.
-            </p>
+            <div>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">
+                My Developer Philosophy
+              </h3>
+              <p className="mb-4">
+                I am a Full Stack Developer with hands-on experience building
+                scalable and maintainable web applications using the MERN stack
+                (React.js, Node.js, MongoDB, and Express). I enjoy turning complex
+                requirements into clean, practical solutions.
+              </p>
+              <p>
+                I focus on writing quality code with attention to performance,
+                usability, and long-term maintainability. I’m motivated to work
+                on meaningful projects where technology solves real-world
+                problems and helps users effectively.
+              </p>
+            </div>
+            <div className="mt-6 border-t border-gray-200/40 dark:border-white/5 pt-4">
+              <span className="text-xs font-bold uppercase text-indigo-600 dark:text-indigo-400 tracking-wider">
+                Solving problems through codebase logic
+              </span>
+            </div>
           </motion.div>
 
+          {/* Right column: 4 Micro detail cards */}
           <motion.div
             variants={{
               hidden: { opacity: 0, y: 18 },
               visible: { opacity: 1, y: 0 },
             }}
             transition={{ duration: 0.5 }}
-            className="glass-card p-5 sm:p-6 space-y-4"
+            className="md:col-span-5 flex flex-col gap-4 sm:gap-5"
           >
-            <div className="flex flex-col sm:flex-row sm:justify-between gap-1">
-              <span className="text-xs sm:text-sm text-gray-500">
-                Location
-              </span>
-              <span className="text-sm font-medium text-gray-900 dark:text-white">
-                Bengaluru, Karnataka, India
-              </span>
-            </div>
-
-            <div className="flex flex-col sm:flex-row sm:justify-between gap-1">
-              <span className="text-xs sm:text-sm text-gray-500">
-                Experience Level
-              </span>
-              <span className="text-sm font-medium text-gray-900 dark:text-white">
-                Entry-level Full Stack Developer
-              </span>
-            </div>
-
-            <div className="flex flex-col sm:flex-row sm:justify-between gap-1">
-              <span className="text-xs sm:text-sm text-gray-500">
-                Primary Stack
-              </span>
-              <span className="text-sm font-medium text-gray-900 dark:text-white">
-                MERN Stack
-              </span>
-            </div>
-
-            <div className="flex flex-col sm:flex-row sm:justify-between gap-1">
-              <span className="text-xs sm:text-sm text-gray-500">
-                Availability
-              </span>
-              <span className="text-sm font-medium text-gray-900 dark:text-white">
-                Open to Opportunities
-              </span>
-            </div>
+            {[
+              {
+                label: "Location",
+                value: "Bengaluru, Karnataka, India",
+                icon: <FiMapPin className="text-pink-500" size={18} />,
+              },
+              {
+                label: "Experience Level",
+                value: "Entry-level Developer",
+                icon: <FiBriefcase className="text-indigo-500" size={18} />,
+              },
+              {
+                label: "Primary Stack",
+                value: "MERN Stack (MongoDB, React)",
+                icon: <FiCpu className="text-cyan-500" size={18} />,
+              },
+              {
+                label: "Availability",
+                value: "Open to Opportunities",
+                icon: <FiCalendar className="text-emerald-500" size={18} />,
+              },
+            ].map((stat, idx) => (
+              <div
+                key={idx}
+                className="glass-card p-4 sm:p-5 flex items-center gap-4 hover:scale-[1.02] transition-all duration-300"
+              >
+                <div className="p-3 bg-black/5 dark:bg-white/5 flex items-center justify-center shrink-0 border border-black/10 dark:border-white/10">
+                  {stat.icon}
+                </div>
+                <div className="flex flex-col min-w-0">
+                  <span className="text-[10px] text-gray-400 dark:text-gray-500 uppercase font-bold tracking-wider">
+                    {stat.label}
+                  </span>
+                  <span className="text-sm font-bold text-gray-800 dark:text-white mt-0.5 truncate">
+                    {stat.value}
+                  </span>
+                </div>
+              </div>
+            ))}
           </motion.div>
         </motion.div>
       </div>
