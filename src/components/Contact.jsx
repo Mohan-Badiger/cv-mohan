@@ -32,7 +32,7 @@ const Contact = () => {
         >
           {/* Centered Icon Container */}
           <span className="relative flex h-14 w-14 items-center justify-center bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 text-black dark:text-white mb-6">
-            <FiSend size={22} className="animate-pulse text-indigo-500" />
+            <FiSend size={22} className="animate-pulse text-black dark:text-white" />
           </span>
 
           <p className="mb-8 max-w-2xl text-sm sm:text-base text-gray-600 dark:text-gray-400 leading-relaxed font-semibold font-mono">

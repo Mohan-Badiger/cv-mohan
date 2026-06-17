@@ -143,10 +143,9 @@ const Activity = () => {
                             }}
                             transition={{ duration: 0.15 }}
                             className={`absolute z-50 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-md border border-gray-200 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-xs text-gray-700 dark:text-gray-200 shadow-lg
-                              ${
-                                hovered.row === 0
-                                  ? "top-5"   // show below for top row
-                                  : "-top-14" // show above otherwise
+                              ${hovered.row === 0
+                                ? "top-5"   // show below for top row
+                                : "-top-14" // show above otherwise
                               }
                             `}
                           >
