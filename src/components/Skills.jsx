@@ -1,28 +1,23 @@
 import { motion } from "motion/react";
-import { FiLayout, FiServer, FiDatabase, FiSliders } from "react-icons/fi";
 
 const skills = [
   {
     title: "Frontend",
-    icon: <FiLayout className="text-black dark:text-white" size={20} />,
     items: ["React.js", "JavaScript (ES6+)", "HTML5", "CSS3", "Tailwind CSS"],
     hoverGlow: "hover:border-black/30",
   },
   {
     title: "Backend",
-    icon: <FiServer className="text-black dark:text-white" size={20} />,
     items: ["Node.js", "Express.js", "RESTful APIs", "JWT Auth"],
     hoverGlow: "hover:border-black/30",
   },
   {
     title: "Database",
-    icon: <FiDatabase className="text-black dark:text-white" size={20} />,
     items: ["MongoDB", "Mongoose", "PostgreSQL"],
     hoverGlow: "hover:border-black/30",
   },
   {
     title: "Tools & Practices",
-    icon: <FiSliders className="text-black dark:text-white" size={20} />,
     items: ["Git & GitHub", "Postman API", "VS Code", "Clean Code"],
     hoverGlow: "hover:border-black/30",
   },
@@ -73,9 +68,6 @@ const Skills = () => {
               <div>
                 {/* Header */}
                 <div className="flex items-center gap-3 border-b border-gray-200/40 dark:border-white/5 pb-4 mb-5">
-                  <div className="p-2.5 bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 flex items-center justify-center shrink-0">
-                    {group.icon}
-                  </div>
                   <h3 className="text-base sm:text-lg font-bold text-gray-900 dark:text-white">
                     {group.title}
                   </h3>
