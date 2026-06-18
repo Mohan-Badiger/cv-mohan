@@ -1,5 +1,4 @@
 import { motion } from "motion/react";
-import { FiBookOpen, FiAward } from "react-icons/fi";
 
 const education = [
   {
@@ -11,7 +10,6 @@ const education = [
       "Completed hands-on projects using modern full-stack web technologies.",
       "Specialized study in software engineering, database management, and networking.",
     ],
-    icon: <FiAward size={20} className="text-black dark:text-white" />,
   },
   {
     degree: "Pre-University / Higher Secondary (12th)",
@@ -21,7 +19,6 @@ const education = [
       "Specialization in Computer Science and mathematics streams.",
       "Developed solid foundations in logical thinking and analytical problem-solving.",
     ],
-    icon: <FiBookOpen size={20} className="text-black dark:text-white" />,
   },
 ];
 
@@ -55,15 +52,10 @@ const Education = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.1 }}
-              className="glass-card p-6 sm:p-8 flex flex-col md:flex-row gap-5 hover:scale-[1.005] transition-all duration-300"
+              className="glass-card p-6 sm:p-8 hover:scale-[1.005] transition-all duration-300"
             >
-              {/* Left Column: Icon */}
-              <div className="p-3.5 bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 flex items-center justify-center shrink-0 h-12 w-12 self-start">
-                {edu.icon}
-              </div>
-
-              {/* Right Column: Info */}
-              <div className="flex-1">
+              {/* Info */}
+              <div>
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 border-b border-gray-200/40 dark:border-white/5 pb-3">
                   <div>
                     <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white leading-snug">
