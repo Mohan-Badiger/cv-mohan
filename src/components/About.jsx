@@ -16,7 +16,7 @@ const About = () => {
           <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-gray-900 dark:text-white">
             About Me
           </h2>
-          <p className="mt-2 text-sm sm:text-base text-gray-500 dark:text-gray-400">
+          <p className="mt-2 text-sm sm:text-base text-gray-600 dark:text-gray-400">
             A quick professional overview
           </p>
         </motion.div>
@@ -97,7 +97,7 @@ const About = () => {
                 className="glass-card p-4 sm:p-5 flex flex-col justify-center hover:scale-[1.02] transition-all duration-300"
               >
                 <div className="flex flex-col min-w-0">
-                  <span className="text-[10px] text-gray-400 dark:text-gray-500 uppercase font-bold tracking-wider">
+                  <span className="text-[10px] text-gray-600 dark:text-gray-400 uppercase font-bold tracking-wider">
                     {stat.label}
                   </span>
                   <span className="text-sm font-bold text-gray-800 dark:text-white mt-0.5 truncate">

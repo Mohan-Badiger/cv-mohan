@@ -38,7 +38,7 @@ const Education = () => {
           <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-gray-900 dark:text-white">
             Education
           </h2>
-          <p className="mt-2 text-sm sm:text-base text-gray-500 dark:text-gray-400">
+          <p className="mt-2 text-sm sm:text-base text-gray-600 dark:text-gray-400">
             Academic qualifications and computer science foundations
           </p>
         </motion.div>
@@ -66,7 +66,7 @@ const Education = () => {
                     </p>
                   </div>
                   
-                  <span className="rounded-none glass-pill px-3 py-1.5 text-xs font-semibold text-gray-500 dark:text-gray-400 self-start border border-black/10 dark:border-white/10">
+                  <span className="rounded-none glass-pill px-3 py-1.5 text-xs font-semibold text-gray-600 dark:text-gray-400 self-start border border-black/10 dark:border-white/10">
                     {edu.year}
                   </span>
                 </div>

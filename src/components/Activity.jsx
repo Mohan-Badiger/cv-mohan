@@ -95,14 +95,14 @@ const Activity = () => {
           <h2 className="text-2xl sm:text-3xl font-medium text-black dark:text-white">
             GitHub Activity
           </h2>
-          <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+          <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
             {total.toLocaleString()} contributions from {range.start} to{" "}
             {range.end}
           </p>
         </motion.div>
 
         {loading && (
-          <p className="text-sm text-gray-500 dark:text-gray-400">
+          <p className="text-sm text-gray-600 dark:text-gray-400">
             Loading activity…
           </p>
         )}
@@ -153,7 +153,7 @@ const Activity = () => {
                               {day.contributionCount} contribution
                               {day.contributionCount !== 1 && "s"}
                             </strong>
-                            <div className="text-[11px] text-gray-500 dark:text-gray-400">
+                            <div className="text-[11px] text-gray-600 dark:text-gray-400">
                               on {formatDate(day.date)}
                             </div>
                           </motion.div>
@@ -172,7 +172,7 @@ const Activity = () => {
           href="https://github.com/Mohan-Badiger"
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-4 inline-block text-xs text-gray-500 hover:text-black dark:hover:text-white"
+          className="mt-4 inline-block text-xs text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white"
         >
           View GitHub Profile →
         </a>

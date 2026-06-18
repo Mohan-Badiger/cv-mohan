@@ -17,7 +17,7 @@ const Contact = () => {
           <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-gray-900 dark:text-white">
             Let’s Connect
           </h2>
-          <p className="mt-2 text-sm sm:text-base text-gray-500 dark:text-gray-400">
+          <p className="mt-2 text-sm sm:text-base text-gray-600 dark:text-gray-400">
             Open for opportunities, projects, and discussions
           </p>
         </motion.div>
