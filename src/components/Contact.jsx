@@ -14,7 +14,7 @@ const Contact = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="mb-8 sm:mb-10 text-center"
         >
-          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-gray-900 dark:text-white">
             Let’s Connect
           </h2>
           <p className="mt-2 text-sm sm:text-base text-gray-500 dark:text-gray-400">
