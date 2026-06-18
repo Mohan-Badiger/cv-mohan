@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { FiExternalLink, FiGithub, FiFolder } from "react-icons/fi";
+import { FiExternalLink, FiGithub } from "react-icons/fi";
 
 const projects = [
   {
@@ -81,11 +81,8 @@ const Projects = () => {
               className="group glass-card p-6 flex flex-col justify-between"
             >
               <div>
-                {/* Header: Folder Icon + Role */}
-                <div className="flex items-start justify-between gap-4">
-                  <div className={`p-2.5 bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 text-gray-700 dark:text-gray-300 flex items-center justify-center shrink-0`}>
-                    <FiFolder size={18} />
-                  </div>
+                {/* Header: Role */}
+                <div className="flex items-start justify-end">
                   <span className="bg-black/5 dark:bg-white/10 px-2.5 py-1 text-[11px] font-bold text-gray-500 dark:text-gray-400">
                     {project.role}
                   </span>
