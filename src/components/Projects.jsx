@@ -57,7 +57,7 @@ const Projects = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="mb-10 sm:mb-12"
         >
-          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-gray-900 dark:text-white">
             Projects
           </h2>
           <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
@@ -89,7 +89,7 @@ const Projects = () => {
                 </div>
 
                 {/* Title */}
-                <h3 className="mt-4 text-lg font-bold text-gray-900 dark:text-white group-hover:text-black dark:group-hover:text-white transition-colors duration-350">
+                <h3 className="mt-4 text-lg font-medium text-gray-900 dark:text-white group-hover:text-black dark:group-hover:text-white transition-colors duration-350">
                   {project.title}
                 </h3>
 
