@@ -36,7 +36,7 @@ const Experience = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="mb-12"
         >
-          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-gray-900 dark:text-white">
             Work Experience
           </h2>
           <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
@@ -59,7 +59,7 @@ const Experience = () => {
                 <div className="glass-card p-6 hover:scale-[1.005] transition-all duration-300">
                   <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-gray-200/40 dark:border-white/5 pb-4">
                     <div>
-                      <h3 className="text-lg font-bold text-gray-900 dark:text-white">
+                      <h3 className="text-lg font-medium text-gray-900 dark:text-white">
                         {exp.role}
                       </h3>
                       <p className="text-sm font-semibold text-gray-700 dark:text-gray-300 mt-1">

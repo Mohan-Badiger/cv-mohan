@@ -35,7 +35,7 @@ const Education = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="mb-10 sm:mb-12"
         >
-          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-gray-900 dark:text-white">
             Education
           </h2>
           <p className="mt-2 text-sm sm:text-base text-gray-500 dark:text-gray-400">
@@ -58,7 +58,7 @@ const Education = () => {
               <div>
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 border-b border-gray-200/40 dark:border-white/5 pb-3">
                   <div>
-                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white leading-snug">
+                    <h3 className="text-lg sm:text-xl font-medium text-gray-900 dark:text-white leading-snug">
                       {edu.degree}
                     </h3>
                     <p className="text-sm font-semibold text-gray-600 dark:text-gray-400 mt-0.5">
