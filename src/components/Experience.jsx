@@ -39,7 +39,7 @@ const Experience = () => {
           <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-gray-900 dark:text-white">
             Work Experience
           </h2>
-          <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+          <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
             Professional journey and technical projects
           </p>
         </motion.div>
@@ -67,7 +67,7 @@ const Experience = () => {
                       </p>
                     </div>
 
-                    <div className="inline-flex items-center gap-2 rounded-none glass-pill px-3 py-1.5 text-xs font-semibold text-gray-500 dark:text-gray-400 max-w-max self-start md:self-center border border-black/10 dark:border-white/5">
+                    <div className="inline-flex items-center gap-2 rounded-none glass-pill px-3 py-1.5 text-xs font-semibold text-gray-600 dark:text-gray-400 max-w-max self-start md:self-center border border-black/10 dark:border-white/5">
                       {exp.period}
                     </div>
                   </div>

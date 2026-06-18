@@ -38,7 +38,7 @@ const Hero = () => {
               visible: { opacity: 1, y: 0 },
             }}
             transition={{ duration: 0.5 }}
-            className="text-xs font-medium uppercase tracking-widest text-gray-500 dark:text-gray-400"
+            className="text-xs font-medium uppercase tracking-widest text-gray-600 dark:text-gray-400"
           >
             Hello, I’m
           </motion.p>
@@ -64,7 +64,7 @@ const Hero = () => {
             transition={{ duration: 0.55 }}
             className="text-base sm:text-lg md:text-2xl font-medium text-gray-700 dark:text-gray-300"
           >
-            Full Stack Developer <span className="text-gray-400">(MERN Stack)</span>
+            Full Stack Developer <span className="text-gray-500 dark:text-gray-400">(MERN Stack)</span>
           </motion.h2>
 
           {/* Location + Socials */}

@@ -60,7 +60,7 @@ const Projects = () => {
           <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-gray-900 dark:text-white">
             Projects
           </h2>
-          <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+          <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
             Selected work showcasing MERN development & system integrations
           </p>
         </motion.div>
@@ -94,7 +94,7 @@ const Projects = () => {
                 </h3>
 
                 {/* Description */}
-                <p className="mt-3 text-xs sm:text-sm leading-relaxed text-gray-500 dark:text-gray-400">
+                <p className="mt-3 text-xs sm:text-sm leading-relaxed text-gray-600 dark:text-gray-400">
                   {project.description}
                 </p>
               </div>
@@ -120,6 +120,7 @@ const Projects = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 rounded-none glass-pill px-3.5 py-1.5 text-xs font-semibold text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition duration-200 border border-black/10 dark:border-white/10"
+                      aria-label={`View GitHub source code for ${project.title}`}
                     >
                       <FiGithub size={13} />
                       Code
@@ -132,12 +133,13 @@ const Projects = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 rounded-none bg-black/90 dark:bg-white/95 text-white dark:text-black px-4.5 py-1.5 text-xs font-bold hover:opacity-85 active:scale-95 transition-all duration-200 border border-black dark:border-white"
+                      aria-label={`View live demo of ${project.title}`}
                     >
                       <FiExternalLink size={13} />
                       Live Demo
                     </a>
                   ) : (
-                    <span className="text-[11px] text-gray-400 italic">
+                    <span className="text-[11px] text-gray-600 dark:text-gray-400 italic">
                       Private Repository
                     </span>
                   )}

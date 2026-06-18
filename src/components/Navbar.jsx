@@ -93,7 +93,7 @@ const Navbar = () => {
                   onClick={() => scrollToSection(item.href)}
                   className={`text-sm transition ${isActive
                       ? "text-black dark:text-white"
-                      : "text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                      : "text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white"
                     }`}
                 >
                   {item.name}

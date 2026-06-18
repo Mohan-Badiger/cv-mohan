@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
 
           {/* Left */}
-          <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">
+          <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">
             © {new Date().getFullYear()} Mohan Badiger. All rights reserved.
           </p>
 
@@ -23,7 +23,7 @@ const Footer = () => {
           <div className="flex items-center justify-center sm:justify-end gap-3">
             <a
               href="mailto:mohanbadiger250@gmail.com"
-              className="p-2.5 rounded-full glass-pill text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white hover:scale-110 active:scale-95 transition duration-300"
+              className="p-2.5 rounded-full glass-pill text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white hover:scale-110 active:scale-95 transition duration-300"
               aria-label="Email Mohan Badiger"
             >
               <FiMail size={16} />
@@ -33,7 +33,7 @@ const Footer = () => {
               href="https://mohanbadiger.site"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2.5 rounded-full glass-pill text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white hover:scale-110 active:scale-95 transition duration-300"
+              className="p-2.5 rounded-full glass-pill text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white hover:scale-110 active:scale-95 transition duration-300"
               aria-label="Mohan Badiger Portfolio Website"
             >
               <FiGlobe size={16} />

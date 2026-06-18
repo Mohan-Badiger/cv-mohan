@@ -39,7 +39,7 @@ const Skills = () => {
           <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-gray-900 dark:text-white">
             Skills
           </h2>
-          <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+          <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
             Technologies and tools I specialize in
           </p>
         </motion.div>
