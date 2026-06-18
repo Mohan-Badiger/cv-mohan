@@ -46,9 +46,6 @@ const Experience = () => {
 
         {/* Timeline */}
         <div className="relative pl-1">
-          {/* Vertical Track - Heavy Solid Line */}
-          <div className="absolute left-4 sm:left-5 top-2 bottom-2 w-0.5 bg-black/15 dark:bg-white/10" />
-
           <div className="space-y-10">
             {experiences.map((exp, index) => (
               <motion.div
@@ -57,14 +54,7 @@ const Experience = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.1 }}
-                className="relative pl-10 sm:pl-14"
               >
-                {/* Timeline Boxy Pulse Node */}
-                <span className="absolute left-2.5 sm:left-3.5 top-6 z-10 flex h-3.5 w-3.5 items-center justify-center">
-                  <span className="animate-ping absolute inline-flex h-full w-full bg-gray-400/50 dark:bg-white/20 opacity-75" />
-                  <span className="relative inline-flex h-2.5 w-2.5 bg-black dark:bg-white border border-white dark:border-black" />
-                </span>
-
                 {/* Card Container */}
                 <div className="glass-card p-6 hover:scale-[1.005] transition-all duration-300">
                   <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-gray-200/40 dark:border-white/5 pb-4">
