@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { FiMail, FiGlobe, FiSend } from "react-icons/fi";
+import { FaLinkedin } from "react-icons/fa";
 
 const Contact = () => {
   return (
@@ -51,7 +52,19 @@ const Contact = () => {
               Email Me
             </a>
 
-            {/* Portfolio Link */}
+            {/* LinkedIn Link */}
+            <a
+              href="https://www.linkedin.com/in/mohan-badiger"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex justify-center items-center gap-2 rounded-none glass-pill px-8 py-3.5 text-sm font-bold text-gray-900 dark:text-white hover:scale-105 active:scale-95 transition duration-300 w-full sm:w-auto border border-black/10 dark:border-white/10"
+              aria-label="View Mohan Badiger LinkedIn Profile"
+            >
+              <FaLinkedin size={16} />
+              LinkedIn Profile
+            </a>
+
+            {/* Portfolio Website Link */}
             <a
               href="https://mohanbadiger.site"
               target="_blank"
@@ -60,7 +73,7 @@ const Contact = () => {
               aria-label="View Mohan Badiger Portfolio Website"
             >
               <FiGlobe size={16} />
-              View Portfolio
+              Portfolio Website
             </a>
           </div>
         </motion.div>
