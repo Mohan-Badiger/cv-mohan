@@ -13,7 +13,7 @@ const About = () => {
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="mb-10 sm:mb-12"
         >
-          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-gray-900 dark:text-white">
             About Me
           </h2>
           <p className="mt-2 text-sm sm:text-base text-gray-500 dark:text-gray-400">
@@ -42,7 +42,7 @@ const About = () => {
             className="glass-card p-6 sm:p-8 text-gray-600 dark:text-gray-400 leading-relaxed text-sm sm:text-base md:col-span-7 flex flex-col justify-between"
           >
             <div>
-              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">
+              <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-4">
                 My Developer Philosophy
               </h3>
               <p className="mb-4">

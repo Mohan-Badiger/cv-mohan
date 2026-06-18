@@ -92,7 +92,7 @@ const Activity = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="mb-6"
         >
-          <h2 className="text-2xl sm:text-3xl font-semibold text-black dark:text-white">
+          <h2 className="text-2xl sm:text-3xl font-medium text-black dark:text-white">
             GitHub Activity
           </h2>
           <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
