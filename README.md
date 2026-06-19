@@ -76,7 +76,7 @@ Node.js, Express.js, REST APIs, Authentication
 MongoDB, Mongoose, PostgreSQL  
 
 **Tools & Practices:**  
-Git & GitHub, Postman, VS Code, Clean Code  
+Git & GitHub, Postman, VS Code  
 
 ## Setup Instructions
 
