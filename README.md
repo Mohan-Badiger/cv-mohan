@@ -15,6 +15,7 @@ cv : https://mohanbadiger.info
 ## Tech Stack
 
 - React.js
+- Next.js
 - JavaScript (ES6+)
 - HTML5
 - CSS3
