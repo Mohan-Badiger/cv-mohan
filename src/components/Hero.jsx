@@ -4,11 +4,11 @@ import {
   FiMail,
   FiMapPin,
   FiGlobe,
+  FiPhone,
 } from "react-icons/fi";
 import {
   FaGithub,
   FaLinkedin,
-  FaInstagram,
 } from "react-icons/fa";
 
 const Hero = () => {
@@ -52,7 +52,7 @@ const Hero = () => {
             transition={{ duration: 0.55 }}
             className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-gray-900 dark:text-white leading-tight"
           >
-            Mohan S Badiger
+            Mohan Badiger
           </motion.h1>
 
           {/* Role */}
@@ -106,9 +106,9 @@ const Hero = () => {
                   label: "Email",
                 },
                 {
-                  href: "https://www.instagram.com/mohan_badiger250",
-                  icon: <FaInstagram size={16} />,
-                  label: "Instagram",
+                  href: "tel:+916362893798",
+                  icon: <FiPhone size={16} />,
+                  label: "Phone",
                 },
               ].map((item) => (
                 <a
