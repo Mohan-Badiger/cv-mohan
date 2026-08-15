@@ -3,24 +3,35 @@ import { FiExternalLink, FiGithub } from "react-icons/fi";
 
 const projects = [
   {
-    title: "Temple Pooja Booking System",
+    title: "Temple Management Platform",
     description:
-      "A full-stack MERN application that allows users to book multiple poojas, make payments, and receive admin-approved virtual tickets.",
-    tech: ["React", "Node.js", "Express", "MongoDB", "Cloudinary"],
+      "A MERN application that allows users to book multiple poojas, make payments, and receive admin-approved virtual tickets.",
+    tech: ["MERN", "Razorpay", "Google OAuth", "Docker", "JWT", "Cloudinary"],
     role: "Full Stack Developer",
     github: "https://github.com/Mohan-Badiger",
     live: "https://kds-temple-frontend.vercel.app",
     color: "from-pink-500 to-rose-500",
+    bullets: [
+      "Built a full-stack platform with 11+ REST API modules and 11 MongoDB models.",
+      "Integrated Razorpay payments with HMAC-SHA256 signature verification.",
+      "Implemented Google OAuth 2.0, Email OTP, JWT, and RBAC authentication.",
+      "Added Cloudinary uploads, React lazy loading, rate limiting, and XSS protection."
+    ]
   },
   {
-    title: "CV Website",
+    title: "Droplyx – E-Commerce Price Tracking SaaS",
     description:
-      "A modern CV website built with React, Tailwind CSS, and Framer Motion, focused on clean UX, performance, and recruiter readability.",
-    tech: ["React", "Tailwind CSS", "Framer Motion"],
-    role: "Frontend Developer",
+      "A full-stack SaaS automating price tracking across 5 e-commerce platforms with multi-user tracking features.",
+    tech: ["Next.js", "MongoDB", "Puppeteer", "JWT", "Docker"],
+    role: "Full Stack Developer",
     github: "https://github.com/Mohan-Badiger",
-    live: "https://mohanbadiger.site",
+    live: "",
     color: "from-indigo-500 to-purple-500",
+    bullets: [
+      "Built a full-stack SaaS automating price tracking across 5 e-commerce platforms.",
+      "Designed REST APIs, Mongoose schemas, and URL deduplication for scalable multi-user product tracking.",
+      "Implemented JWT/OTP authentication, and 2 email alert workflows for price drops and target prices."
+    ]
   },
   {
     title: "EasyShare",
@@ -31,6 +42,16 @@ const projects = [
     github: "https://github.com/Mohan-Badiger/EasyShare",
     live: "https://easysharefiles.vercel.app",
     color: "from-cyan-500 to-blue-500",
+  },
+  {
+    title: "CV Website",
+    description:
+      "A modern CV website built with React, Tailwind CSS, and Framer Motion, focused on clean UX, performance, and recruiter readability.",
+    tech: ["React", "Tailwind CSS", "Framer Motion"],
+    role: "Frontend Developer",
+    github: "https://github.com/Mohan-Badiger",
+    live: "https://mohanbadiger.site",
+    color: "from-indigo-500 to-purple-500",
   },
   {
     title: "Employee Management Dashboard",
@@ -94,9 +115,23 @@ const Projects = () => {
                 </h3>
 
                 {/* Description */}
-                <p className="mt-3 text-xs sm:text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-                  {project.description}
-                </p>
+                {project.description && (
+                  <p className="mt-3 text-xs sm:text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+                    {project.description}
+                  </p>
+                )}
+
+                {/* Bullets */}
+                {project.bullets && (
+                  <ul className="mt-4 space-y-2.5 pl-2">
+                    {project.bullets.map((bullet, i) => (
+                      <li key={i} className="flex items-start gap-2 text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
+                        <span className="text-gray-400 dark:text-gray-600 shrink-0 select-none">•</span>
+                        <span>{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
 
               <div>
