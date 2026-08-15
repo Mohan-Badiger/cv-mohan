@@ -3,21 +3,20 @@ import { motion } from "motion/react";
 const education = [
   {
     degree: "Bachelor of Computer Applications (BCA)",
-    institution: "Rani Chennamma University",
+    institution: "BLDEA’s BHS Arts and TGP Science College, Jamakhandi",
     year: "2022 – 2025",
     highlights: [
-      "Strong foundation in computer science and programming fundamentals.",
-      "Completed hands-on projects using modern full-stack web technologies.",
-      "Specialized study in software engineering, database management, and networking.",
+      "Academic Result: CGPA of 8.47",
+      "Gained strong foundations in Data Structures, OOP, DBMS, Operating Systems, and Computer Networks.",
     ],
   },
   {
-    degree: "Pre-University / Higher Secondary (12th)",
-    institution: "SRA PU College",
-    year: "2020 – 2022",
+    degree: "Pre-University Education (12th)",
+    institution: "SRA PU College, Banahatti",
+    year: "2021 – 2022",
     highlights: [
-      "Specialization in Computer Science and mathematics streams.",
-      "Developed solid foundations in logical thinking and analytical problem-solving.",
+      "Academic Result: Percentage of 81.83%",
+      "Specialized in Computer Science and mathematical fundamentals.",
     ],
   },
 ];

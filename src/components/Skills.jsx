@@ -2,23 +2,39 @@ import { motion } from "motion/react";
 
 const skills = [
   {
+    title: "Languages",
+    items: ["JavaScript (ES6+)", "SQL", "HTML5", "CSS3", "PHP"],
+    hoverGlow: "hover:border-black/30",
+  },
+  {
     title: "Frontend",
-    items: ["React.js", "JavaScript (ES6+)", "HTML5", "CSS3", "Tailwind CSS"],
+    items: ["React.js", "Next.js", "Tailwind CSS"],
     hoverGlow: "hover:border-black/30",
   },
   {
     title: "Backend",
-    items: ["Node.js", "Express.js", "RESTful APIs", "JWT Auth"],
+    items: ["Node.js", "Express.js", "REST APIs"],
     hoverGlow: "hover:border-black/30",
   },
   {
-    title: "Database",
-    items: ["MongoDB", "Mongoose", "PostgreSQL"],
+    title: "Databases",
+    items: ["MongoDB", "MySQL", "PostgreSQL"],
     hoverGlow: "hover:border-black/30",
   },
   {
-    title: "Tools & Practices",
-    items: ["Git & GitHub", "Postman API", "VS Code", "Clean Code"],
+    title: "Tools & DevOps",
+    items: ["Git", "GitHub", "Docker", "Postman", "AWS EC2", "Vercel", "Cloudinary"],
+    hoverGlow: "hover:border-black/30",
+  },
+  {
+    title: "CS Fundamentals",
+    items: [
+      "Data Structures & Algorithms",
+      "OOP",
+      "DBMS",
+      "Operating Systems",
+      "Computer Networks",
+    ],
     hoverGlow: "hover:border-black/30",
   },
 ];
