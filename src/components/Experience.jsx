@@ -2,23 +2,25 @@ import { motion } from "motion/react";
 
 const experiences = [
   {
-    role: "Full Stack Developer",
-    company: "Personal Projects / Internship",
-    period: "2024 – Present",
+    role: "Software Development Engineer Intern",
+    company: "Bluestock Fintech (Remote)",
+    period: "Nov, 2025 – Dec, 2025",
     description: [
-      "Developed full-stack web applications using MongoDB, Express, React, and Node.js.",
-      "Implemented secure authentication, role-based access control, and REST APIs.",
-      "Built responsive layouts with Tailwind CSS, ensuring cross-browser compatibility.",
+      "Developed and enhanced full-stack web features using React.js, Node.js, Express.js, and REST APIs.",
+      "Implemented backend logic, API integrations, and database operations for application features.",
+      "Debugged frontend and backend issues and improved application functionality and performance.",
+      "Used Git/GitHub for version control and collaborated with developers throughout the SDLC.",
     ],
   },
   {
-    role: "Frontend Developer",
-    company: "Academic Projects",
-    period: "2023 – 2024",
+    role: "Web Development Intern",
+    company: "Infidata Technologies (Remote)",
+    period: "Feb, 2025 – Apr, 2025",
     description: [
-      "Created modern React interfaces with modular, reusable components.",
-      "Integrated REST APIs and handled frontend state management effectively.",
-      "Focused on clean typography, accessibility, and performance optimizations.",
+      "Built responsive web applications using HTML, CSS, JavaScript, PHP, and MySQL.",
+      "Implemented CRUD operations and backend integrations for dynamic data workflows.",
+      "Developed modules handling user input validation and database interactions.",
+      "Debugged frontend, backend, and database issues to improve application reliability.",
     ],
   },
 ];
