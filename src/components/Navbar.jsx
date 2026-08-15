@@ -77,9 +77,9 @@ const Navbar = () => {
         <button
           onClick={() => scrollToSection("#")}
           className="text-sm sm:text-base font-semibold tracking-wide text-black dark:text-white"
-          aria-label="Go to top - Mohan S Badiger"
+          aria-label="Go to top - Mohan Badiger"
         >
-          Mohan&nbsp;S&nbsp;Badiger
+          Mohan&nbsp;Badiger
         </button>
 
         {/* Desktop Menu */}
